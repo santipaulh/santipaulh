@@ -136,7 +136,7 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
                         borderTopRightRadius: "var(--rules-page-dashboard-roounded_border_corners-1)",
                         borderBottomRightRadius: "var(--rules-page-dashboard-roounded_border_corners-1)"
                     }}
-                    src={"/cv-hero-pfp.jpg"}
+                    src={"/old.cv-hero-pfp.jpg"}
                     alt="Mi cara"
                     className="self-end cover w-full h-[320px] md:h-[420px] lg:h-[var(--homepage-firstsection-height)]"
                 />
