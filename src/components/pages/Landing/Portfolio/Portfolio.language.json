@@ -3,5 +3,10 @@
         "notFound": "Portfolio not found",
         "backHome": "Back to Home",
         "backButton": "Back"
+    },
+    "es": {
+        "notFound": "Portfolio no existente",
+        "backHome": "Back to Home",
+        "backButton": "Back"
     }
 }

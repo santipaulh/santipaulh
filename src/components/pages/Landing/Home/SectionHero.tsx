@@ -3,7 +3,6 @@
 import styles from "./Home.module.css";
 import dynamic from "next/dynamic";
 import type { AvailableLanguages } from "@/components/assets/data";
-import { Component } from "./Home";
 import homeLanguage from "./Home.language.json";
 import {
     faBirthdayCake,
@@ -19,6 +18,7 @@ import {
     faWhatsapp
 } from "@fortawesome/free-brands-svg-icons"
 import Image from "next/image";
+import { Component } from "../Common/Component";
 
 const FontAwesomeIcon = dynamic(
     () => import("@fortawesome/react-fontawesome").then(x => x.FontAwesomeIcon),
@@ -30,8 +30,9 @@ interface SectionHeroProps {
 }
 
 const SectionHero = ({ lang }: SectionHeroProps) => {
+    const language = homeLanguage[lang];
     const data = homeLanguage[lang].hero;
-    
+
     const iconMap: Record<string, any> = {
         faBirthdayCake: faBirthdayCake,
         faBusinessTime: faBusinessTime,
@@ -72,7 +73,18 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
                         </div>
                     ))}
                 </div>
-                <div className="mt-auto flex flex-row gap-[10px]">
+                <div className="mt-auto flex flex-col gap-[12px] sm:flex-row sm:items-center">
+                    <a
+                        href={language.resume.cvUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90 ${styles["shadow-addon"]}`}
+                        style={{
+                            backgroundColor: "var(--homepage-color-2)"
+                        }}
+                    >
+                        {language.resume.cvText}
+                    </a>
                     <div className="flex flex-row gap-[10px]">
                         {[
                             {
@@ -82,12 +94,12 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
                             },
                             {
                                 icon: faInstagram,
-                                src: "https://instagram.com/santipaulh",
+                                src: "https://instagram.com/santi.herreram",
                                 hexColor: "#E1306C"
                             },
                             {
                                 icon: faFacebookF,
-                                src: "https://facebook.com/paulherrera",
+                                src: "https://www.facebook.com/santipaulh/",
                                 hexColor: "#1877F2 "
                             },
                             {

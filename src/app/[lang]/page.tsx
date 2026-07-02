@@ -1,8 +1,10 @@
+import { AvailableLanguages } from "@/components/assets/data";
 import HomePage from "@/components/pages/Landing/Home/Home";
 import { use } from "react";
 
 export default function Home({ params }: {
-    params: Promise<{ lang: string }>
+    params: Promise<{ lang: AvailableLanguages }>
 }) {
-    return <HomePage lang={"en"} />
+    const { lang } = use(params)
+    return <HomePage lang={lang} />
 }
