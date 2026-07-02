@@ -23,7 +23,7 @@
       ]
     },
     "resume": {
-      "cvUrl": "/CV-eng.pdf",
+      "cvUrl": "/cv/CV-eng-latex.pdf",
       "cvText": "Download CV"
     },
     "portfolio": {
@@ -64,7 +64,7 @@
       ]
     },
     "resume": {
-      "cvUrl": "/CV-esp.pdf",
+      "cvUrl": "/cv/CV-esp-latex.pdf",
       "cvText": "Descargar CV"
     },
     "portfolio": {
