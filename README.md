@@ -1,5 +1,5 @@
 ## About me
-> ¡Hello! My name is Santiago, a FullStack developer from Ecuador with broad experience on TypeScript, Java, Python, and plenty of frameworks to work on projects. Take a look at my [public & private projects](https://santipaul.com/en).<br/><br/>
+> ¡Hello! My name is Santiago, a FullStack developer from Ecuador with broad experience on TypeScript, Java, Python, and plenty of frameworks to work on projects. Take a look at my [portfolio; public & private projects](https://santipaul.com/en).<br/>
 <!-- > [![Portfolio](https://img.shields.io/badge/OpenPortfolio-75243B?style=for-the-badge&logo=typescript&logoColor=white&labelColor=101010)](https://santipaul.com/en)<br/> -->
 
 ## Language Stack
