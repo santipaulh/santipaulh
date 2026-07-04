@@ -18,7 +18,7 @@ import {
     faWhatsapp
 } from "@fortawesome/free-brands-svg-icons"
 import Image from "next/image";
-import { Component } from "../Common/Component";
+import { Component } from "@/components/Common/Component";
 
 const FontAwesomeIcon = dynamic(
     () => import("@fortawesome/react-fontawesome").then(x => x.FontAwesomeIcon),

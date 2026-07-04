@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "./Home.module.css";
-import { getFuturePortfolioList } from "../Common/portfolioData";
+import { getFuturePortfolioList } from "@/components/Common/portfolioData";
 import { AvailableLanguages } from "@/components/assets/data";
 import langJson from "./Home.language.json"
 
