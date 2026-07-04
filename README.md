@@ -1,36 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## About me
+> ¡Hello! My name is Santiago, a FullStack developer from Ecuador with broad experience on TypeScript, Java, Python, and plenty of frameworks to work on projects.
 
-## Getting Started
+## Language Stack
+> [![TypeScript](https://img.shields.io/badge/TypeScript-1CFFEC?style=for-the-badge&logo=typescript&logoColor=white&labelColor=101010)]()<br/>
+> [![JavaScript](https://img.shields.io/badge/JavaScript-1CFFEC?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)]()<br/>
+> [![Java](https://img.shields.io/badge/Java-1CFFEC?style=for-the-badge&logo=java&logoColor=white&labelColor=101010)]()<br/>
+> [![Python](https://img.shields.io/badge/Python-1CFFEC?style=for-the-badge&logo=python&logoColor=white&labelColor=101010)]()<br/>
+> [![PHP](https://img.shields.io/badge/PHP-1CFFEC?style=for-the-badge&logo=php&logoColor=white&labelColor=101010)]()<br/>
+> [![HTML/CSS/JS](https://img.shields.io/badge/HTML%2FCSS%2FJS-1CFFEC?style=for-the-badge&logo=html5&logoColor=white&labelColor=101010)]()<br/>
 
-First, run the development server:
+## Frameworks & Tech Tools
+> [![My Skills](https://skillicons.dev/icons?i=react,nextjs,nestjs,angular,flask,fastapi,cloudflare,nginx,git,vscode,redis,docker,mongodb,sqlite,postgresql,mysql)](https://skillicons.dev)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Web Portfolio
+> https://santipaul.com/en
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## My mission and vision
+> I've specialized on always working on building modular, reusable, and maintainable systems. I prioritize centralized architecture, divided into horizontal features and vertical microservices.
