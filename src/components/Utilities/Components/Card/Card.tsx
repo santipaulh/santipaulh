@@ -15,30 +15,30 @@ const Card = ({
     const bgColorMap = {
         "1": "#FFFFFF",
         "2": "var(--homepage-color-1)"
-    };
+    }
 
     const borderColorMap = {
         "1": "#FFFFFF",
         "2": "var(--homepage-color-1)"
-    };
+    }
 
-    const borderStyles: React.CSSProperties = {};
+    const borderStyles: React.CSSProperties = {}
 
     if (border) {
-        const borderColor = borderColorMap[border.color];
-        const borderSize = "8px";
+        const borderColor = borderColorMap[border.color]
+        const borderSize = "8px"
 
         if (border.showing.includes("up")) {
-            borderStyles.borderTop = `${borderSize} solid ${borderColor}`;
+            borderStyles.borderTop = `${borderSize} solid ${borderColor}`
         }
         if (border.showing.includes("down")) {
-            borderStyles.borderBottom = `${borderSize} solid ${borderColor}`;
+            borderStyles.borderBottom = `${borderSize} solid ${borderColor}`
         }
         if (border.showing.includes("left")) {
-            borderStyles.borderLeft = `${borderSize} solid ${borderColor}`;
+            borderStyles.borderLeft = `${borderSize} solid ${borderColor}`
         }
         if (border.showing.includes("right")) {
-            borderStyles.borderRight = `${borderSize} solid ${borderColor}`;
+            borderStyles.borderRight = `${borderSize} solid ${borderColor}`
         }
     }
 
@@ -52,7 +52,7 @@ const Card = ({
         >
             {children}
         </div>
-    );
+    )
 }
 
 export default Card

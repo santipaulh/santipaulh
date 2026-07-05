@@ -1,8 +1,8 @@
-import Link from "next/link"
 import styles from "./Home.module.css"
 import langJson from "./Home.language.json"
 import { Portfolio } from "@/components/Utilities/Data/portfolio/portfolioData"
 import { AvailableLanguages } from "@/components/Utilities/Data/Data"
+import Component from "@/components/Utilities/Component"
 
 const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
     void lang
@@ -29,22 +29,38 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                         <div className={styles["section_portfolio-card_overlay"]} />
 
                         <div className={styles["section_portfolio-card_badge"]}>
-                            Featured
+                            <Component.Text
+                                color="1"
+                                textSize="12px"
+                                fontWeight="600"
+                            >
+                                Featured
+                            </Component.Text>
                         </div>
 
                         <div className={styles["section_portfolio-card_content"]}>
-                            <h3 className={styles["section_portfolio-card_title"]}>
-                                {featuredItem.title[lang]}
-                            </h3>
-                            <p className={styles["section_portfolio-card_description"]}>
-                                {featuredItem.slogan[lang]}
-                            </p>
-                            <Link
-                                href={`/${lang}/portfolio/${featuredItem.id}`}
-                                className={styles["section_portfolio-card_button"]}
+                            <Component.Text
+                                color="1"
+                                textSize="22px"
+                                fontWeight="700"
                             >
-                                {language.portfolio.knowMore}
-                            </Link>
+                                {featuredItem.title[lang]}
+                            </Component.Text>
+                            <Component.Text
+                                color="1"
+                                textSize="14px"
+                                fontWeight="400"
+                            >
+                                {featuredItem.slogan[lang]}
+                            </Component.Text>
+                            <Component.Button
+                                action={{
+                                    type: "ref",
+                                    href: `/${lang}/portfolio/${featuredItem.id}`
+                                }}
+                                text={language.portfolio.knowMore}
+                                color="2"
+                            />
                         </div>
                     </article>
                 )}
@@ -64,18 +80,28 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                             <div className={styles["section_portfolio-card_overlay"]} />
 
                             <div className={styles["section_portfolio-card_content"]}>
-                                <h3 className={styles["section_portfolio-card_title"]}>
-                                    {item.title[lang]}
-                                </h3>
-                                <p className={styles["section_portfolio-card_description"]}>
-                                    {item.slogan[lang]}
-                                </p>
-                                <Link
-                                    href={`/${lang}/portfolio/${item.id}`}
-                                    className={styles["section_portfolio-card_button"]}
+                                <Component.Text
+                                    color="1"
+                                    textSize="22px"
+                                    fontWeight="700"
                                 >
-                                    {language.portfolio.knowMore}
-                                </Link>
+                                    {item.title[lang]}
+                                </Component.Text>
+                                <Component.Text
+                                    color="1"
+                                    textSize="14px"
+                                    fontWeight="400"
+                                >
+                                    {item.slogan[lang]}
+                                </Component.Text>
+                                <Component.Button
+                                    action={{
+                                        type: "ref",
+                                        href: `/${lang}/portfolio/${item.id}`
+                                    }}
+                                    text={language.portfolio.knowMore}
+                                    color="2"
+                                />
                             </div>
                         </article>
                     ))}

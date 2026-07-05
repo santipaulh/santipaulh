@@ -1,14 +1,15 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import styles from "./Home.module.css";
+import { useState } from "react"
+import styles from "./Home.module.css"
 import langJson from "./Home.language.json"
-import { Portfolio } from "@/components/Utilities/Data/portfolio/portfolioData";
-import { AvailableLanguages } from "@/components/Utilities/Data/Data";
+import { Portfolio } from "@/components/Utilities/Data/portfolio/portfolioData"
+import { AvailableLanguages } from "@/components/Utilities/Data/Data"
+import Component from "@/components/Utilities/Component"
 
 
 export default function SectionFutures({ lang }: { lang: AvailableLanguages }) {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false)
     const itemsFuturePortfolio = Portfolio.getFuturePortfolioList()
     const language = langJson[lang]
 
@@ -23,53 +24,77 @@ export default function SectionFutures({ lang }: { lang: AvailableLanguages }) {
                         aria-expanded={isOpen}
                     >
                         <span className={styles["future-toggleIcon"]}>
-                            {isOpen ? "−" : "+"}
+                            <Component.Text
+                                color="2"
+                                textSize="20px"
+                                fontWeight="700"
+                            >
+                                {isOpen ? "−" : "+"}
+                            </Component.Text>
                         </span>
                         <span className={styles["future-toggleLabel"]}>
-                            {futureContent.title[lang]}
+                            <Component.Text
+                                color="2"
+                                textSize="16px"
+                                fontWeight="600"
+                            >
+                                {futureContent.title[lang]}
+                            </Component.Text>
                         </span>
                     </button>
 
                     {isOpen && (
                         <div className={styles["future-content"]}>
                             <div className={styles["future-section"]}>
-                                <h4 className={styles["future-sectionTitle"]}>
+                                <Component.Text color="2" textSize="18px" fontWeight="700">
                                     {language.futures.problem_to_solve}
-                                </h4>
-                                <p className={styles["future-bodyText"]}>
+                                </Component.Text>
+                                <Component.Text color="2" textSize="15px" fontWeight="400">
                                     {futureContent.problem[lang]}
-                                </p>
+                                </Component.Text>
                             </div>
 
                             <div className={styles["future-section"]}>
-                                <h4 className={styles["future-sectionTitle"]}>
+                                <Component.Text color="2" textSize="18px" fontWeight="700">
                                     {language.futures.expected_features}
-                                </h4>
+                                </Component.Text>
                                 <ul className={styles["future-list"]}>
                                     {futureContent.expected_features[lang].map((feature) => (
-                                        <li key={feature}>{feature}</li>
+                                        <li key={feature}>
+                                            <Component.Text color="2" textSize="15px" fontWeight="400">
+                                                {feature}
+                                            </Component.Text>
+                                        </li>
                                     ))}
                                 </ul>
                             </div>
 
                             <div className={styles["future-section"]}>
-                                <h4 className={styles["future-sectionTitle"]}>
+                                <Component.Text color="2" textSize="18px" fontWeight="700">
                                     {language.futures.expected_results}
-                                </h4>
+                                </Component.Text>
                                 <ul className={styles["future-list"]}>
                                     {futureContent.expected_results[lang].map((result, idx) => (
-                                        <li key={`${idx}-as3d,lñasd`}>{result}</li>
+                                        <li key={`${idx}-as3d,lñasd`}>
+                                            <Component.Text color="2" textSize="15px" fontWeight="400">
+                                                {result}
+                                            </Component.Text>
+                                        </li>
                                     ))}
                                 </ul>
                             </div>
 
                             <div className={styles["future-section"]}>
-                                <h4 className={styles["future-sectionTitle"]}>
+                                <Component.Text color="2" textSize="18px" fontWeight="700">
                                     {language.futures.tech_stack}
-                                </h4>
+                                </Component.Text>
                                 <ul className={styles["future-list"]}>
                                     {futureContent.expected_tech_stack[lang].map((result, idx) => (
-                                        <li key={`${idx}-asd,lñasd`}>{result}</li>
+                                        <li key={`${idx}-asd,lñasd`}>
+                                            <Component.Text color="2" textSize="15px" fontWeight="400">
+                                                {result}
+                                            </Component.Text>
+                                        </li>
                                     ))}
                                 </ul>
                             </div>
@@ -78,5 +103,5 @@ export default function SectionFutures({ lang }: { lang: AvailableLanguages }) {
                 </div>
             ))}
         </div>
-    );
+    )
 }

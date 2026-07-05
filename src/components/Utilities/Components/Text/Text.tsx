@@ -17,9 +17,9 @@ const Text = ({
         "1": "#FFFFFF",
         "2": "#616161",
         "3": "var(--homepage-color-1)"
-    };
+    }
 
-    const shadowStyle = shadow ? "2px 2px 4px rgba(0, 0, 0, 0.29)" : "none";
+    const shadowStyle = shadow ? "2px 2px 4px rgba(0, 0, 0, 0.29)" : "none"
 
     if (style === "quote") {
         return (
@@ -35,7 +35,7 @@ const Text = ({
             >
                 {children}
             </div>
-        );
+        )
     }
 
     if (style === "bullet-point") {
@@ -56,7 +56,7 @@ const Text = ({
                 <span>•</span>
                 <div>{children}</div>
             </div>
-        );
+        )
     }
 
     return (
@@ -70,7 +70,7 @@ const Text = ({
         >
             {children}
         </div>
-    );
+    )
 }
 
 export default Text

@@ -1,5 +1,5 @@
-import { AvailableLanguages } from "../../Data";
-import { FuturePortfolio } from "../portfolioData";
+import { AvailableLanguages } from "../../Data"
+import { FuturePortfolio } from "../portfolioData"
 
 const OmniInboxEmail: FuturePortfolio = {
     title: {
@@ -56,6 +56,6 @@ const OmniInboxEmail: FuturePortfolio = {
             "Platforms: Linux, Windows"
         ]
     }
-};
+}
 
 export default OmniInboxEmail

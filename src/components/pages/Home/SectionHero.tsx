@@ -1,8 +1,8 @@
 "use client"
 
-import styles from "./Home.module.css";
-import dynamic from "next/dynamic";
-import homeLanguage from "./Home.language.json";
+import styles from "./Home.module.css"
+import dynamic from "next/dynamic"
+import homeLanguage from "./Home.language.json"
 import {
     faBirthdayCake,
     faBusinessTime,
@@ -16,9 +16,9 @@ import {
     faLinkedinIn,
     faWhatsapp
 } from "@fortawesome/free-brands-svg-icons"
-import Image from "next/image";
-import Component from "@/components/Utilities/Component";
-import { AvailableLanguages } from "@/components/Utilities/Data/Data";
+import Image from "next/image"
+import Component from "@/components/Utilities/Component"
+import { AvailableLanguages } from "@/components/Utilities/Data/Data"
 
 const FontAwesomeIcon = dynamic(
     () => import("@fortawesome/react-fontawesome").then(x => x.FontAwesomeIcon),
@@ -26,12 +26,12 @@ const FontAwesomeIcon = dynamic(
 )
 
 interface SectionHeroProps {
-    lang: AvailableLanguages;
+    lang: AvailableLanguages
 }
 
 const SectionHero = ({ lang }: SectionHeroProps) => {
-    const language = homeLanguage[lang];
-    const data = homeLanguage[lang].hero;
+    const language = homeLanguage[lang]
+    const data = homeLanguage[lang].hero
 
     const iconMap: Record<string, any> = {
         faBirthdayCake: faBirthdayCake,
@@ -39,7 +39,7 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
         faPhone: faPhone,
         faEnvelope: faEnvelope,
         faGlobeAmericas: faGlobeAmericas
-    };
+    }
 
     return (
         <div
@@ -83,7 +83,13 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
                             backgroundColor: "var(--homepage-color-2)"
                         }}
                     >
-                        {language.resume.cvText}
+                        <Component.Text
+                            color="1"
+                            textSize="14px"
+                            fontWeight="600"
+                        >
+                            {language.resume.cvText}
+                        </Component.Text>
                     </a>
                     <div className="flex flex-row gap-[10px]">
                         {[

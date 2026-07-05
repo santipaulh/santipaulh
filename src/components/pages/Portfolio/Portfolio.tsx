@@ -77,27 +77,40 @@ const PortfolioCard = ({
                                 rel="noreferrer"
                                 className="rounded-md border border-(--homepage-color-1) px-4 py-2 text-sm font-semibold text-(--homepage-color-1) transition-opacity hover:opacity-80"
                             >
-                                {link.text[lang]}
+                                <Component.Text
+                                    color="3"
+                                    textSize="14px"
+                                    fontWeight="600"
+                                >
+                                    {link.text[lang]}
+                                </Component.Text>
                             </a>
                         ))}
                     </div>
                 ) : null}
 
                 {showPrimaryAction && onPrimaryAction && (
-                    <button
-                        type="button"
-                        onClick={onPrimaryAction}
-                        className="w-fit rounded-md bg-(--homepage-color-1) px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-                    >
-                        Ver más
-                    </button>
+                    <Component.Button
+                        action={{
+                            type: "click",
+                            onClick: onPrimaryAction
+                        }}
+                        text={lang === "es" ? "Ver mas" : "See more"}
+                        color="2"
+                    />
                 )}
             </div>
         </div>
     </div>
 )
 
-export default function PortfolioPage({ portfolioId, lang }: { portfolioId: string; lang: AvailableLanguages }) {
+export default function PortfolioPage({
+    portfolioId,
+    lang
+}: {
+    portfolioId: string
+    lang: AvailableLanguages
+}) {
     const portfolio = Portfolio.getPortfolioItem(portfolioId)
     const [
         selectedItem,
@@ -182,7 +195,13 @@ export default function PortfolioPage({ portfolioId, lang }: { portfolioId: stri
                                 href={`/${lang}`}
                                 className="rounded-md border border-white px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
                             >
-                                ← Volver
+                                <Component.Text
+                                    color="1"
+                                    textSize="14px"
+                                    fontWeight="600"
+                                >
+                                    {lang === "es" ? "← Volver" : "← Back"}
+                                </Component.Text>
                             </Link>
                         </div>
                     </div>
@@ -199,7 +218,13 @@ export default function PortfolioPage({ portfolioId, lang }: { portfolioId: stri
                                             key={`${idx}-12378179ds78192`}
                                             className="rounded-full border border-white bg-white/10 px-3 py-2 text-sm font-medium text-white"
                                         >
-                                            {item}
+                                            <Component.Text
+                                                color="1"
+                                                textSize="14px"
+                                                fontWeight="500"
+                                            >
+                                                {item}
+                                            </Component.Text>
                                         </span>
                                     ))}
                                 </div>
@@ -218,7 +243,13 @@ export default function PortfolioPage({ portfolioId, lang }: { portfolioId: stri
                                             key={`${idx}-3123123123121312`}
                                             className="rounded-full border border-white bg-white/10 px-3 py-2 text-sm font-medium text-white"
                                         >
-                                            {item}
+                                            <Component.Text
+                                                color="1"
+                                                textSize="14px"
+                                                fontWeight="500"
+                                            >
+                                                {item}
+                                            </Component.Text>
                                         </span>
                                     ))}
                                 </div>
@@ -242,7 +273,13 @@ export default function PortfolioPage({ portfolioId, lang }: { portfolioId: stri
                                 onClick={closeModal}
                                 className="rounded-full border border-(--homepage-color-1) px-3 py-1 text-sm font-semibold text-(--homepage-color-1) transition-opacity hover:opacity-80"
                             >
-                                Cerrar
+                                <Component.Text
+                                    color="3"
+                                    textSize="14px"
+                                    fontWeight="600"
+                                >
+                                    {lang === "es" ? "Cerrar" : "Close"}
+                                </Component.Text>
                             </button>
                         </div>
 
