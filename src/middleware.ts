@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
-import { AvailableLanguages } from "./components/assets/data"
+import { AvailableLanguages } from "./components/Utilities/Data/Data"
 
 const locales: AvailableLanguages[] = ["en", "es"]
 const defaultLocale = "es"
