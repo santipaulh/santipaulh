@@ -2,11 +2,15 @@
     "en": {
         "notFound": "Portfolio not found",
         "backHome": "Back to Home",
-        "backButton": "Back"
+        "backButton": "Back",
+        "techStack": "Tech Stack",
+        "coreFeatures": "Core Features"
     },
     "es": {
         "notFound": "Portfolio no existente",
         "backHome": "Back to Home",
-        "backButton": "Back"
+        "backButton": "Back",
+        "techStack": "Stack Tecnológico",
+        "coreFeatures": "Core Features"
     }
 }

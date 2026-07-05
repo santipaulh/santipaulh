@@ -210,7 +210,7 @@ export default function PortfolioPage({
                         <Component.Card backgroundColor="2" className="p-6">
                             <div className="flex flex-col gap-3">
                                 <Component.Text fontWeight="600" textSize="24px" color="1">
-                                    Tech Stack
+                                    {langJson[lang].techStack}
                                 </Component.Text>
                                 <div className="flex flex-wrap gap-2">
                                     {portfolio.tech_stack[lang].map((item, idx) => (
@@ -235,7 +235,7 @@ export default function PortfolioPage({
                         <Component.Card backgroundColor="2" className="p-6">
                             <div className="flex flex-col gap-3">
                                 <Component.Text fontWeight="600" textSize="24px" color="1">
-                                    Core features
+                                    {langJson[lang].coreFeatures}
                                 </Component.Text>
                                 <div className="flex flex-wrap gap-2">
                                     {portfolio.core_features[lang].map((item, idx) => (
