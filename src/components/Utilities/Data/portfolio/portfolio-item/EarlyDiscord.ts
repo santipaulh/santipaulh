@@ -3,8 +3,8 @@ import type { PortfolioItem } from "../portfolioData"
 const EarlyDiscord: PortfolioItem = {
     id: "early-days-discord-communities",
     title: {
-        es: "Primeros días en comunidades de Discord",
-        en: "Early Days in Discord Communities"
+        es: "Mis inicios; Programador para Influencers",
+        en: "Early Days; Developing for Influencers"
     },
     slogan: {
         es: "Automatización y moderación en comunidades activas.",
