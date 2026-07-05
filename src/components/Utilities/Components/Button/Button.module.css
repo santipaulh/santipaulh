@@ -2,5 +2,6 @@
 
 .button {
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.30);
+    cursor: pointer;
     @apply inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition hover:opacity-90
 }

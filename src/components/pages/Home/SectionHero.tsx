@@ -18,7 +18,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import Image from "next/image"
 import Component from "@/components/Utilities/Component"
-import { AvailableLanguages } from "@/components/Utilities/Data/Data"
+import { AvailableLanguages, Data } from "@/components/Utilities/Data/Data"
 
 const FontAwesomeIcon = dynamic(
     () => import("@fortawesome/react-fontawesome").then(x => x.FontAwesomeIcon),
@@ -74,43 +74,34 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
                     ))}
                 </div>
                 <div className="mt-auto flex flex-col gap-[12px] sm:flex-row sm:items-center">
-                    <a
-                        href={language.resume.cvUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90 ${styles["shadow-addon"]}`}
-                        style={{
-                            backgroundColor: "var(--homepage-color-2)"
+                    <Component.Button
+                        action={{
+                            type: "ref",
+                            href: language.resume.cvUrl
                         }}
-                    >
-                        <Component.Text
-                            color="1"
-                            textSize="14px"
-                            fontWeight="600"
-                        >
-                            {language.resume.cvText}
-                        </Component.Text>
-                    </a>
+                        color="1"
+                        text={language.resume.cvText}
+                    />
                     <div className="flex flex-row gap-[10px]">
                         {[
                             {
                                 icon: faWhatsapp,
-                                src: "https://wa.me/+593995519509",
+                                src: Data.mySocialLinks.whatsapp,
                                 hexColor: "#25D366"
                             },
                             {
                                 icon: faInstagram,
-                                src: "https://instagram.com/santi.herreram",
+                                src: Data.mySocialLinks.instagram,
                                 hexColor: "#E1306C"
                             },
                             {
                                 icon: faFacebookF,
-                                src: "https://www.facebook.com/santipaulh/",
+                                src: Data.mySocialLinks.facebook,
                                 hexColor: "#1877F2 "
                             },
                             {
                                 icon: faLinkedinIn,
-                                src: "http://www.linkedin.com/in/santipaulh",
+                                src: Data.mySocialLinks.linkedin,
                                 hexColor: "#0A66C2"
                             }
                         ].map((x, idx) => (
