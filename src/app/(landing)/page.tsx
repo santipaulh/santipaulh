@@ -1,4 +1,4 @@
-import HomePage from "@/components/pages/Landing/Home/Home";
+import HomePage from "@/components/pages/Home/Home";
 
 export default function Home() {
   return <HomePage lang={"en"} />

@@ -1,14 +1,13 @@
 "use client"
-
 import styles from "./Home.module.css";
 import SectionHero from "./SectionHero";
 import translations from "./Home.language.json";
-import type { AvailableLanguages } from "@/components/assets/data";
 import SectionPortfolio from "./SectionPortfolio";
 import SectionFutures from "./SectionFutures";
-import { Component } from "../Common/Component";
 import { ReactNode } from "react";
 import SectionLanguage from "./SectionLanguage";
+import Component from "@/components/Utilities/Component";
+import { AvailableLanguages } from "@/components/Utilities/Data/Data";
 
 export default function HomePage({ lang = 'en' }: {
     lang: AvailableLanguages

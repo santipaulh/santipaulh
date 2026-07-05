@@ -2,18 +2,18 @@
 
 import Link from "next/link"
 import { useEffect, useState } from "react"
-import type { AvailableLanguages } from "@/components/assets/data"
-import { Component } from "../Common/Component"
 import styles from "./Portfolio.module.css"
-import { getPortfolioItem, type PortfolioCategory, type PortfolioSectionItem } from "../Common/portfolioData"
 import langJson from "./Portfolio.language.json"
+import Component from "@/components/Utilities/Component"
+import { Portfolio, PortfolioCategory, PortfolioLink, PortfolioSectionItem } from "@/components/Utilities/Data/portfolio/portfolioData"
+import { AvailableLanguages } from "@/components/Utilities/Data/Data"
 
 type PortfolioCardContent = {
     title: string
     subtitle?: string
     image_src: string
     bullets: string[]
-    links?: Array<{ text: string; href: string }>
+    links?: PortfolioLink[]
 }
 
 const PortfolioCard = ({
@@ -21,13 +21,15 @@ const PortfolioCard = ({
     onPrimaryAction,
     showPrimaryAction = false,
     titleSize = "18px",
-    subtitleSize = "14px"
+    subtitleSize = "14px",
+    lang
 }: {
     item: PortfolioCardContent
     onPrimaryAction?: () => void
     showPrimaryAction?: boolean
     titleSize?: string
-    subtitleSize?: string
+    subtitleSize?: string,
+    lang: AvailableLanguages
 }) => (
     <div className="overflow-hidden rounded-lg border border-[#e8e8e8] bg-white shadow-sm">
         <div className="flex h-full flex-col border-l-8 border-(--homepage-color-1) p-5 lg:flex-row">
@@ -75,7 +77,7 @@ const PortfolioCard = ({
                                 rel="noreferrer"
                                 className="rounded-md border border-(--homepage-color-1) px-4 py-2 text-sm font-semibold text-(--homepage-color-1) transition-opacity hover:opacity-80"
                             >
-                                {link.text}
+                                {link.text[lang]}
                             </a>
                         ))}
                     </div>
@@ -96,7 +98,7 @@ const PortfolioCard = ({
 )
 
 export default function PortfolioPage({ portfolioId, lang }: { portfolioId: string; lang: AvailableLanguages }) {
-    const portfolio = getPortfolioItem(portfolioId, lang)
+    const portfolio = Portfolio.getPortfolioItem(portfolioId)
     const [
         selectedItem,
         setSelectedItem
@@ -112,16 +114,17 @@ export default function PortfolioPage({ portfolioId, lang }: { portfolioId: stri
 
     const renderSectionCards = (items: PortfolioSectionItem[]) => (
         <div className="flex flex-col gap-2">
-            {items.map((item) => (
+            {items.map((item, idx) => (
                 <PortfolioCard
-                    key={item.title}
+                    key={`${idx}-123192810931029`}
                     item={{
-                        title: item.title,
-                        subtitle: item.subtitle,
+                        title: item.title[lang],
+                        subtitle: item.subtitle[lang],
                         image_src: item.image_src,
-                        bullets: item.bullets,
+                        bullets: item.bullets[lang],
                         links: item.links
                     }}
+                    lang={lang}
                     onPrimaryAction={() => setSelectedItem(item)}
                     showPrimaryAction={Boolean(item.gallery && item.gallery.length > 0)}
                 />
@@ -131,14 +134,14 @@ export default function PortfolioPage({ portfolioId, lang }: { portfolioId: stri
 
     const renderCategories = (categories: PortfolioCategory[]) => (
         <div className="flex flex-col gap-8">
-            {categories.map((category) => (
-                <div key={category.title} className="flex flex-col gap-4">
+            {categories.map((category, idx) => (
+                <div key={`${idx}-1231231231231`} className="flex flex-col gap-4">
                     <div className="flex flex-col gap-2">
                         <Component.Text fontWeight="600" textSize="30px" color="2">
-                            {category.title}
+                            {category.title[lang]}
                         </Component.Text>
                         <Component.Text fontWeight="600" textSize="20px" color="2" style="quote">
-                            {category.subtitle}
+                            {category.subtitle[lang]}
                         </Component.Text>
                     </div>
                     {renderSectionCards(category.items)}
@@ -164,16 +167,16 @@ export default function PortfolioPage({ portfolioId, lang }: { portfolioId: stri
                     <div className="relative min-h-[320px] overflow-hidden rounded-(--rules-page-dashboard-roounded_border_corners-1) shadow-md">
                         <img
                             src={portfolio.image_src}
-                            alt={portfolio.title}
+                            alt={portfolio.title[lang]}
                             className="absolute inset-0 h-full w-full object-cover"
                         />
                         <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(0,0,0,0.78),rgba(0,0,0,0.35))]" />
                         <div className="relative flex min-h-[320px] flex-col items-center justify-center gap-6 px-4 py-8 text-center sm:px-8 md:min-h-[360px]">
                             <Component.Text fontWeight="700" textSize="48px" color="1" shadow={true}>
-                                {portfolio.title}
+                                {portfolio.title[lang]}
                             </Component.Text>
                             <Component.Text fontWeight="400" textSize="18px" color="1" shadow={true}>
-                                {portfolio.slogan}
+                                {portfolio.slogan[lang]}
                             </Component.Text>
                             <Link
                                 href={`/${lang}`}
@@ -184,16 +187,16 @@ export default function PortfolioPage({ portfolioId, lang }: { portfolioId: stri
                         </div>
                     </div>
 
-                    {portfolio.tech_stack.length > 0 ? (
+                    {portfolio.tech_stack[lang].length > 0 ? (
                         <Component.Card backgroundColor="2" className="p-6">
                             <div className="flex flex-col gap-3">
                                 <Component.Text fontWeight="600" textSize="24px" color="1">
                                     Tech Stack
                                 </Component.Text>
                                 <div className="flex flex-wrap gap-2">
-                                    {portfolio.tech_stack.map((item) => (
+                                    {portfolio.tech_stack[lang].map((item, idx) => (
                                         <span
-                                            key={item}
+                                            key={`${idx}-12378179ds78192`}
                                             className="rounded-full border border-white bg-white/10 px-3 py-2 text-sm font-medium text-white"
                                         >
                                             {item}
@@ -203,16 +206,16 @@ export default function PortfolioPage({ portfolioId, lang }: { portfolioId: stri
                             </div>
                         </Component.Card>
                     ) : null}
-                    {portfolio.core_features.length > 0 ? (
+                    {portfolio.core_features[lang].length > 0 ? (
                         <Component.Card backgroundColor="2" className="p-6">
                             <div className="flex flex-col gap-3">
                                 <Component.Text fontWeight="600" textSize="24px" color="1">
                                     Core features
                                 </Component.Text>
                                 <div className="flex flex-wrap gap-2">
-                                    {portfolio.core_features.map((item) => (
+                                    {portfolio.core_features[lang].map((item, idx) => (
                                         <span
-                                            key={item}
+                                            key={`${idx}-3123123123121312`}
                                             className="rounded-full border border-white bg-white/10 px-3 py-2 text-sm font-medium text-white"
                                         >
                                             {item}
@@ -232,7 +235,7 @@ export default function PortfolioPage({ portfolioId, lang }: { portfolioId: stri
                     <div className="max-h-[90vh] w-full max-w-[1200px] overflow-y-auto rounded-xl bg-white p-6 shadow-2xl">
                         <div className="mb-4 flex items-center justify-between gap-4">
                             <Component.Text fontWeight="700" textSize="24px" color="2">
-                                {selectedItem.title}
+                                {selectedItem.title[lang]}
                             </Component.Text>
                             <button
                                 type="button"
@@ -244,18 +247,21 @@ export default function PortfolioPage({ portfolioId, lang }: { portfolioId: stri
                         </div>
 
                         <div className="flex flex-col gap-4">
-                            {selectedItem.gallery?.map((entry, index) => (
-                                <PortfolioCard
-                                    key={`${entry.title}-${index}`}
-                                    item={{
-                                        title: entry.title ?? selectedItem.title,
-                                        image_src: entry.image_src,
-                                        bullets: entry.bullets,
-                                        links: []
-                                    }}
-                                    titleSize="16px"
-                                />
-                            ))}
+                            {!!selectedItem.gallery ? (
+                                selectedItem.gallery.map((entry, index) => (
+                                    <PortfolioCard
+                                        key={`123123123211-${index}`}
+                                        item={{
+                                            title: entry.title[lang],
+                                            image_src: entry.image_src,
+                                            bullets: entry.bullets[lang],
+                                            links: []
+                                        }}
+                                        lang={lang}
+                                        titleSize="16px"
+                                    />
+                                ))
+                            ) : null}
                         </div>
                     </div>
                 </div>

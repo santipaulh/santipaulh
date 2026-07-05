@@ -2,7 +2,6 @@
 
 import styles from "./Home.module.css";
 import dynamic from "next/dynamic";
-import type { AvailableLanguages } from "@/components/assets/data";
 import homeLanguage from "./Home.language.json";
 import {
     faBirthdayCake,
@@ -18,7 +17,8 @@ import {
     faWhatsapp
 } from "@fortawesome/free-brands-svg-icons"
 import Image from "next/image";
-import { Component } from "@/components/Common/Component";
+import Component from "@/components/Utilities/Component";
+import { AvailableLanguages } from "@/components/Utilities/Data/Data";
 
 const FontAwesomeIcon = dynamic(
     () => import("@fortawesome/react-fontawesome").then(x => x.FontAwesomeIcon),

@@ -1,5 +1,5 @@
 import { AvailableLanguages } from "@/components/assets/data";
-import PortfolioPage from "@/components/pages/Landing/Portfolio/Portfolio";
+import PortfolioPage from "@/components/pages/Portfolio/Portfolio";
 import { use } from "react";
 
 export default function Portfolio({ params }: {

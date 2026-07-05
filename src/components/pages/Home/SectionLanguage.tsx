@@ -1,4 +1,4 @@
-import { AvailableLanguages } from "@/components/assets/data"
+import { AvailableLanguages } from "@/components/Utilities/Data/Data";
 import styles from "./Home.module.css";
 import { useRouter, useParams } from "next/navigation";
 

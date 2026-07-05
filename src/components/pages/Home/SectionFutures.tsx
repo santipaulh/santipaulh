@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 import styles from "./Home.module.css";
-import { getFuturePortfolioList } from "@/components/Common/portfolioData";
-import { AvailableLanguages } from "@/components/assets/data";
 import langJson from "./Home.language.json"
+import { Portfolio } from "@/components/Utilities/Data/portfolio/portfolioData";
+import { AvailableLanguages } from "@/components/Utilities/Data/Data";
 
 
 export default function SectionFutures({ lang }: { lang: AvailableLanguages }) {
     const [isOpen, setIsOpen] = useState(false);
-    const itemsFuturePortfolio = getFuturePortfolioList(lang)
+    const itemsFuturePortfolio = Portfolio.getFuturePortfolioList()
     const language = langJson[lang]
 
     return (
@@ -26,7 +26,7 @@ export default function SectionFutures({ lang }: { lang: AvailableLanguages }) {
                             {isOpen ? "−" : "+"}
                         </span>
                         <span className={styles["future-toggleLabel"]}>
-                            {futureContent.title}
+                            {futureContent.title[lang]}
                         </span>
                     </button>
 
@@ -37,7 +37,7 @@ export default function SectionFutures({ lang }: { lang: AvailableLanguages }) {
                                     {language.futures.problem_to_solve}
                                 </h4>
                                 <p className={styles["future-bodyText"]}>
-                                    {futureContent.problem}
+                                    {futureContent.problem[lang]}
                                 </p>
                             </div>
 
@@ -46,7 +46,7 @@ export default function SectionFutures({ lang }: { lang: AvailableLanguages }) {
                                     {language.futures.expected_features}
                                 </h4>
                                 <ul className={styles["future-list"]}>
-                                    {futureContent.expected_features.map((feature) => (
+                                    {futureContent.expected_features[lang].map((feature) => (
                                         <li key={feature}>{feature}</li>
                                     ))}
                                 </ul>
@@ -57,7 +57,7 @@ export default function SectionFutures({ lang }: { lang: AvailableLanguages }) {
                                     {language.futures.expected_results}
                                 </h4>
                                 <ul className={styles["future-list"]}>
-                                    {futureContent.expected_results.map((result, idx) => (
+                                    {futureContent.expected_results[lang].map((result, idx) => (
                                         <li key={`${idx}-as3d,lñasd`}>{result}</li>
                                     ))}
                                 </ul>
@@ -68,7 +68,7 @@ export default function SectionFutures({ lang }: { lang: AvailableLanguages }) {
                                     {language.futures.tech_stack}
                                 </h4>
                                 <ul className={styles["future-list"]}>
-                                    {futureContent.expected_tech_stack.map((result, idx) => (
+                                    {futureContent.expected_tech_stack[lang].map((result, idx) => (
                                         <li key={`${idx}-asd,lñasd`}>{result}</li>
                                     ))}
                                 </ul>
