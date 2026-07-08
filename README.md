@@ -25,7 +25,11 @@
 ### Tools / Infrastructure
 > [![My Skills](https://skillicons.dev/icons?i=docker,nginx,cloudflare,git,github,redis,vscode,postgresql,mysql,mongodb,sqlite)](https://santipaul.com/en)
 
-P.S. You can contact me through my portfolio. I'm open to new opportunities where I can contribute, continue growing my portfolio, and deliver solid results.
+<details>
+<summary>P.S.</summary>
+You can contact me through my portfolio. I'm open to new opportunities where continue growing my portfolio, and deliver you solid results.
+</details>
+
 
 <!--
 
