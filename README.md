@@ -27,7 +27,7 @@
 
 <details>
 <summary>P.S.</summary>
-You can contact me through my portfolio. I'm open to new opportunities where continue growing my portfolio, and deliver you solid results.
+You can contact me through my portfolio. I'm open to new opportunities to continue growing my portfolio and above all deliver you solid results.
 </details>
 
 
