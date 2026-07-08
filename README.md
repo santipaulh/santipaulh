@@ -9,6 +9,8 @@
 |---|---|---|
 | Client | 🐶 [Workspace for "Veterinaria Las Lomas"](https://github.com/santipaulh/client-vetlaslomas-workspace/) | A veterinary management solution developed for one of my previous marketing & workflow automation client, focused on their operational and workflow requirements. |
 | Product | 📕 [Workblox](https://github.com/santipaulh/workblox) | An all-in-one workspace platform for work and study, designed for students, professionals, and executives. |
+<!-- | Product | 🕷️ [Botketing CRM](https://youtube.com/) | My first end-to-end production project, built entirely on my own. It included workflow automation, third-party integrations, and specially with WhatsApp, Instagram, and Facebook APIs.  | -->
+<!-- | Client | ⚙️ [Discord 2019](https://youtube.com/) | Working for influencers. 13 to 17 years of age. Starting my freelancing journey | -->
 
 ## Programming languages
 > [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white&labelColor=101010)](https://santipaul.com/en)<br/>
