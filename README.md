@@ -25,6 +25,8 @@
 ### Tools / Infrastructure
 > [![My Skills](https://skillicons.dev/icons?i=docker,nginx,cloudflare,git,github,redis,vscode,postgresql,mysql,mongodb,sqlite)](https://santipaul.com/en)
 
+P.S. You can contact me through my portfolio. I'm open to new opportunities where I can contribute, continue growing my portfolio, and deliver solid results.
+
 <!--
 
 NOTA MENTAL - Agrega type client 'Discord 2019' y lo que harás será redirigir a un video de Discord 2019; mismo video que esstará en tu portfolio, agregale un video confirmando de los streamers que trabajste igual solo creo tienes 2 importantes
