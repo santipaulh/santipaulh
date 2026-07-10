@@ -16,7 +16,6 @@ import {
     faLinkedinIn,
     faWhatsapp
 } from "@fortawesome/free-brands-svg-icons"
-import Image from "next/image"
 import Component from "@/components/Utilities/Component"
 import { AvailableLanguages, Data } from "@/components/Utilities/Data/Data"
 

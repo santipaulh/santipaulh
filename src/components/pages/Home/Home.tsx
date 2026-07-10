@@ -21,7 +21,8 @@ export default function HomePage({ lang = 'en' }: {
         title: string
         subtitle: string
         body: ReactNode
-    }) => <div className="flex flex-col gap-6">
+    }) => (
+        <div className="flex flex-col gap-6">
             <div className="flex flex-col">
                 <Component.Text fontWeight="600" textSize="30px" color="2">
                     {title}
@@ -32,8 +33,10 @@ export default function HomePage({ lang = 'en' }: {
             </div>
             {body}
         </div>
+    )
 
-console.log(t)
+    if (!t) return null
+    if (!t.portfolio) return null
     return (
         <div className={styles["homepage"]}>
             <div className="relative">

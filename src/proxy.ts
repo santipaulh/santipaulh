@@ -5,7 +5,7 @@ import { AvailableLanguages } from "./components/Utilities/Data/Data"
 const locales: AvailableLanguages[] = ["en", "es"]
 const defaultLocale = "es"
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
     const { pathname } = request.nextUrl
 
     if (
