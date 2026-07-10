@@ -7,10 +7,12 @@ const Button = ({
     text,
     action,
     color,
-    icon
+    icon,
+    borderRadius = "1"
 }: {
     text: string
     color: "1" | "2"
+    borderRadius?: "1" | "2"
     icon?: IconDefinition | null
     action: {
         type: "click"
@@ -20,14 +22,20 @@ const Button = ({
         href: string
     }
 }) => {
+    const borderRadiusX = ({
+        "1": "var(--homepage-rounded-1)",
+        "2": "var(--homepage-rounded-2)"
+    })[borderRadius]
     const colorStyleMap: Record<"1" | "2", React.CSSProperties> = {
         "1": {
             background: "var(--homepage-color-gradient-1)",
-            border: "none"
+            border: "none",
+            borderRadius: borderRadiusX
         },
         "2": {
             backgroundColor: "rgba(255, 255, 255, 0.18)",
-            border: "1px solid #FFFFFF"
+            border: "1px solid #FFFFFF",
+            borderRadius: borderRadiusX
         }
     }
 

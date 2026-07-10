@@ -28,10 +28,10 @@ export default function HomePage({ lang = 'en' }: {
     }) => (
         <div className="flex flex-col gap-6">
             <div className="flex flex-col">
-                <Component.Text fontWeight="600" textSize="30px" color="2">
-                    {title}
+                <Component.Text fontWeight="600" textSize="15px" color="5">
+                    {title.toUpperCase()}
                 </Component.Text>
-                <Component.Text style="quote" fontWeight="600" textSize="16px" color="2">
+                <Component.Text style="quote" fontWeight="600" textSize="24px" color="1">
                     {subtitle}
                 </Component.Text>
             </div>
@@ -43,7 +43,7 @@ export default function HomePage({ lang = 'en' }: {
     if (!t.portfolio) return null
     return (
         <div className={styles["homepage"]}>
-            <div className="flex flex-col w-full h-[100vh] bg-black">
+            <div className="flex flex-col w-full bg-black">
                 <div className="mx-[calc(15%)] flex flex-col gap-7">
                     {/* coso del header */}
                     <div className="flex flex-row justify-between p-9">
@@ -97,11 +97,18 @@ export default function HomePage({ lang = 'en' }: {
                         </div>
                     </div>
                     {/* body */}
-                    <div className="flex flex-col px-9">
+                    <div className="flex flex-col px-9 gap-9">
                         <SectionHero lang={lang} />
+                        <SectionLanguage lang={lang} />
+                        <SectionMemo
+                            title={t.portfolio.title}
+                            subtitle={t.portfolio.subtitle}
+                            body={<SectionPortfolio lang={lang} />}
+                        />
                     </div>
 
                     {/* footer, dudo ponerlo*/}
+                    <div className="h-[100px]"></div>
                 </div>
             </div>
             {/* <div className="relative">

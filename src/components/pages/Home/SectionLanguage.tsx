@@ -11,7 +11,7 @@ const SectionLanguage = ({ lang = 'en' }: { lang: AvailableLanguages }) => {
     }
 
     return (
-        <div className="flex flex-row justify-center gap-4">
+        <div className="flex flex-row justify-center gap-2">
             {Object.entries(availableLangs).map((item, idx) => (
                 <Component.Button
                     action={{
@@ -23,6 +23,7 @@ const SectionLanguage = ({ lang = 'en' }: { lang: AvailableLanguages }) => {
                     key={`${idx}-12312321`}
                     text={item[1]}
                     color={"1"}
+                    borderRadius="1"
                 />
             ))}
         </div>
