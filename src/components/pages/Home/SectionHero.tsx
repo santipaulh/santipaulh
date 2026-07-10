@@ -43,9 +43,8 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
     return (
         <div
             style={{
-                backgroundColor: "var(--homepage-color-1)",
-                borderTopLeftRadius: "var(--rules-page-dashboard-roounded_border_corners-1)",
-                borderBottomLeftRadius: "var(--rules-page-dashboard-roounded_border_corners-1)"
+                background: "var(--homepage-color-gradient-1)",
+                borderRadius: "var(--homepage-rounded-1)"
             }}
             className={`${styles["card"]} min-h-[420px] lg:min-h-[var(--homepage-firstsection-height)] relative flex flex-1 flex-col lg:flex-row`}
         >

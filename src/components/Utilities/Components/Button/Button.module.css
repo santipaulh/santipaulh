@@ -1,7 +1,8 @@
 @reference "../../../../styles/globals.css";
 
 .button {
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.30);
     cursor: pointer;
-    @apply inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition hover:opacity-90
+    border-radius: var(--homepage-rounded-1);
+    /* box-shadow: var(--homepage-box-shadow-1); */
+    @apply inline-flex items-center justify-center px-5 py-2 text-sm font-semibold transition hover:opacity-90
 }

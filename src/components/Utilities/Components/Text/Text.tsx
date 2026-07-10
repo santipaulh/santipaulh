@@ -4,8 +4,12 @@ const Text = ({
     fontWeight,
     style = undefined,
     shadow = false,
-    children
+    children,
+    href
 }: {
+    href?: {
+        url: string
+    }
     color: "1" | "2" | "3"
     textSize: string
     fontWeight: "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900"
