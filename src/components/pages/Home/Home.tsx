@@ -39,12 +39,31 @@ export default function HomePage({ lang = 'en' }: {
     if (!t.portfolio) return null
     return (
         <div className={styles["homepage"]}>
-            <div className="relative">
+            <div className="flex flex-col w-full h-[100vh] bg-black">
+                <div className="mx-[calc(15%)]">
+                    {/* coso del header */}
+                    <div className="flex flex-row p-9">
+                        {/* favicon y titulo */}
+                        <div className="flex flex-row gap-3">
+                            <div className="flex flex-col items-center justify-center">
+                                <Component.Text
+                                    fontWeight="500"
+                                    textSize="14px"
+                                    color="1"
+                                >
+                                    Santiago Paul H.
+                                </Component.Text>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* <div className="relative">
                 <div className={styles["background-hero-backdrop"]} />
                 <div className={styles["background-hero-foto"]} />
-            </div>
+            </div> */}
 
-            <div className={`${styles["sections-container"]}`}>
+            {/* <div className={`${styles["sections-container"]}`}>
                 <div className="w-full max-w-[1300px] px-[3.5%] flex-1 flex flex-col gap-10">
                     <div>
                         <SectionHero lang={lang} />
@@ -65,7 +84,7 @@ export default function HomePage({ lang = 'en' }: {
                     />
 
                 </div>
-            </div>
+            </div> */}
         </div >
     )
 }
