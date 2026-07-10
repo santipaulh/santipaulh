@@ -10,7 +10,7 @@ const Text = ({
     href?: {
         url: string
     }
-    color: "1" | "2" | "3"
+    color: "1" | "2" | "3" | "4" | "5"
     textSize: string
     fontWeight: "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900"
     style?: "quote" | "bullet-point"
@@ -20,7 +20,9 @@ const Text = ({
     const colorMap = {
         "1": "#FFFFFF",
         "2": "#616161",
-        "3": "var(--homepage-color-1)"
+        "3": "var(--homepage-color-1)",
+        "4": "var(--homepage-color-2)",
+        "5": "var(--homepage-color-3)"
     }
 
     const shadowStyle = shadow ? "2px 2px 4px rgba(0, 0, 0, 0.29)" : "none"

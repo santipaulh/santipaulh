@@ -1,7 +1,9 @@
 :root {
     --homepage-firstsection-height: 416px;
     --homepage-color-1: #75243b;
-    --homepage-color-2: #5a1a2b;
+    --homepage-color-2: #471220;
+    --homepage-color-3: #be4465;
+    --homepage-color-3-rgb: 190, 68, 101;
     --homepage-color-rgb-1: 70, 21, 35;
     --homepage-bgcolor-1: #f8f8f8;
     --homepage-rounded-1: 5px;

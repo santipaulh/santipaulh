@@ -12,6 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import {
     faFacebookF,
+    faGithub,
     faInstagram,
     faLinkedinIn,
     faWhatsapp
@@ -44,16 +45,18 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
         <div
             style={{
                 background: "var(--homepage-color-gradient-1)",
-                borderRadius: "var(--homepage-rounded-1)"
+                borderRadius: "var(--homepage-rounded-1)",
+                border: "1px solid var(--homepage-color-2)",
+                overflow: "hidden"
             }}
             className={`${styles["card"]} min-h-[420px] lg:min-h-[var(--homepage-firstsection-height)] relative flex flex-1 flex-col lg:flex-row`}
         >
             <div className="flex flex-col flex-1 p-6 md:p-10">
-                <Component.Text color="1" textSize="28px" fontWeight="700" shadow>
+                <Component.Text color="1" textSize="35px" fontWeight="700" shadow>
                     {data.name}
                 </Component.Text>
                 <div style={{ marginTop: "-8px" }}>
-                    <Component.Text color="1" textSize="18px" fontWeight="400" shadow>
+                    <Component.Text color="5" textSize="20px" fontWeight="600" shadow>
                         {data.title}
                     </Component.Text>
                 </div>
@@ -72,15 +75,7 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
                     ))}
                 </div>
                 <div className="mt-auto flex flex-col gap-[12px] sm:flex-row sm:items-center">
-                    <Component.Button
-                        action={{
-                            type: "ref",
-                            href: language.resume.cvUrl
-                        }}
-                        color="1"
-                        text={language.resume.cvText}
-                    />
-                    <div className="flex flex-row gap-[10px]">
+                    <div className="flex flex-row gap-[14px]">
                         {[
                             {
                                 icon: faWhatsapp,
@@ -93,9 +88,9 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
                                 hexColor: "#E1306C"
                             },
                             {
-                                icon: faFacebookF,
-                                src: Data.mySocialLinks.facebook,
-                                hexColor: "#1877F2 "
+                                icon: faGithub,
+                                src: Data.mySocialLinks.github,
+                                hexColor: "#000000"
                             },
                             {
                                 icon: faLinkedinIn,
@@ -105,8 +100,9 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
                         ].map((x, idx) => (
                             <a
                                 key={`${idx}123109873298132`}
-                                className={`p-[10px] flex flex-row justify-center items-center rounded-full ${styles["shadow-addon"]}`}
+                                className={`p-[10px] flex flex-row justify-center items-center rounded-full`}
                                 style={{
+                                    boxShadow: "0px 0px 1.6px 5px rgba(var(--homepage-color-3-rgb), 0.25)",
                                     backgroundColor: x.hexColor
                                 }}
                                 href={x.src}
@@ -124,16 +120,12 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
             </div>
             <div className="relative hidden lg:block w-full lg:w-auto">
                 <div
-                    className={`absolute bg-white ${styles["profile"]}`}
+                    className={styles["profile"]}
                 />
                 <img
-                    style={{
-                        borderTopRightRadius: "var(--rules-page-dashboard-roounded_border_corners-1)",
-                        borderBottomRightRadius: "var(--rules-page-dashboard-roounded_border_corners-1)"
-                    }}
                     src={"/old.cv-hero-pfp.jpg"}
                     alt="Mi cara"
-                    className="self-end cover w-full h-[320px] md:h-[420px] lg:h-[var(--homepage-firstsection-height)]"
+                    className="relative z-1 self-end cover w-full h-[320px] md:h-[420px] lg:h-[var(--homepage-firstsection-height)]"
                 />
             </div>
         </div>
