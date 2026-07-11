@@ -25,9 +25,10 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
         ]
 
         return (
-            <article
-                className={`overflow-hidden rounded-[20px] border border-white/15 bg-[#111111] ${props.featured ? "flex flex-col lg:flex-row" : "flex flex-col"}`}
-            >
+            <div className={`overflow-hidden rounded-[20px] border border-white/15 bg-[#111111] ${props.featured ? "flex flex-col lg:flex-row" : "flex flex-col"}`} >
+                <div>
+                    a
+                </div>
                 <div
                     className={`relative ${props.featured ? "w-full lg:w-[45%] min-h-[260px]" : "w-full h-[240px]"}`}
                 >
@@ -83,7 +84,7 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                         />
                     </div>
                 </div>
-            </article>
+            </div>
         )
     }
 

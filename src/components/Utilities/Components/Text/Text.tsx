@@ -18,8 +18,8 @@ const Text = ({
     children: React.ReactNode
 }) => {
     const colorMap = {
-        "1": "#FFFFFF",
-        "2": "#616161",
+        "1": "var(--homepage-text-color-1)",
+        "2": "var(--homepage-text-color-2)",
         "3": "var(--homepage-color-1)",
         "4": "var(--homepage-color-2)",
         "5": "var(--homepage-color-3)"

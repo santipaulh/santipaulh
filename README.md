@@ -2,7 +2,7 @@
 > Hello! My name is Santiago, I'm a FullStack developer from Ecuador, South America. With a clear mission on building scalable, modular and centralized projects aiming to build tech ecosystems. Take a look at my [portfolio; public & private repos](https://santipaul.com/en).<br/>
 <!-- > [![Portfolio](https://img.shields.io/badge/OpenPortfolio-75243B?style=for-the-badge&logo=typescript&logoColor=white&labelColor=101010)](https://santipaul.com/en)<br/> -->
 
-## Private & Open Source Projects
+## Production & Open Source Projects
 > Projects created to explore new technologies, test ideas, and experiment with different architectures.
 
 | Type | Project name | Purpose |

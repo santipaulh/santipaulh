@@ -27,13 +27,16 @@ export default function HomePage({ lang = 'en' }: {
         body: ReactNode
     }) => (
         <div className="flex flex-col gap-6">
-            <div className="flex flex-col">
-                <Component.Text fontWeight="600" textSize="15px" color="4">
-                    {title.toUpperCase()}
-                </Component.Text>
-                <Component.Text style="quote" fontWeight="600" textSize="24px" color="5">
-                    {subtitle}
-                </Component.Text>
+            <div className="flex flex-col gap-3">
+                <div className="flex flex-col">
+                    <Component.Text fontWeight="600" textSize="15px" color="4">
+                        {title.toUpperCase()}
+                    </Component.Text>
+                    <Component.Text style="quote" fontWeight="600" textSize="24px" color="2">
+                        {subtitle}
+                    </Component.Text>
+                </div>
+                {/* <div className="flex bg-[var(--homepage-color-2)] h-[2px] opacity-40" /> */}
             </div>
             {body}
         </div>
@@ -42,10 +45,11 @@ export default function HomePage({ lang = 'en' }: {
     if (!t) return null
     if (!t.portfolio) return null
     return (
-        <div className="flex flex-col w-full min-h-[100vh]">
-            <div className="mx-[calc(25%)] h-full flex flex-col gap-7">
+        <div className="h-full flex flex-col gap-7">
+            {/* contenedor header + hero */}
+            <div className="flex flex-col flex-1 gap-24">
                 {/* coso del header */}
-                <div className="flex flex-row justify-between p-9">
+                <div className="mx-[calc(25%)] py-9 flex flex-1 flex-row justify-between">
                     {/* favicon y titulo */}
                     <div className="flex flex-row gap-3">
                         <Component.Text
@@ -59,14 +63,14 @@ export default function HomePage({ lang = 'en' }: {
                             <Component.Text
                                 fontWeight="500"
                                 textSize="14px"
-                                color="1"
+                                color="2"
                             >
                                 Santiago Paul H.
                             </Component.Text>
                             <Component.Text
                                 fontWeight="500"
                                 textSize="12px"
-                                color="2"
+                                color="4"
                             >
                                 Desarrollador de Software
                             </Component.Text>
@@ -95,48 +99,21 @@ export default function HomePage({ lang = 'en' }: {
                         />
                     </div>
                 </div>
-
-                {/* body */}
-                <div className="flex flex-col gap-9">
-                    <SectionHero lang={lang} />
-                    <SectionLanguage lang={lang} />
-                    <SectionMemo
-                        title={t.portfolio.title}
-                        subtitle={t.portfolio.subtitle}
-                        body={<SectionPortfolio lang={lang} />}
-                    />
-                </div>
-
-                {/* footer, dudo ponerlo*/}
-                <div className="h-[100px]"></div>
+                <SectionHero lang={lang} />
             </div>
-            {/* <div className="relative">
-                    <div className={styles["background-hero-backdrop"]} />
-                    <div className={styles["background-hero-foto"]} />
-                </div> */}
 
-            {/* <div className={`${styles["sections-container"]}`}>
-                    <div className="w-full max-w-[1300px] px-[3.5%] flex-1 flex flex-col gap-10">
-                        <div>
-                            <SectionHero lang={lang} />
-                        </div>
-    
-                        <SectionLanguage lang={lang} />
-    
-                        <SectionMemo
-                            title={t.portfolio.title}
-                            subtitle={t.portfolio.subtitle}
-                            body={<SectionPortfolio lang={lang} />}
-                        />
-    
-                        <SectionMemo
-                            title={t.futures.title}
-                            subtitle={t.futures.subtitle}
-                            body={<SectionFutures lang={lang} />}
-                        />
-    
-                    </div>
-                </div> */}
+            {/* body */}
+            <div className="mx-[calc(25%)] flex flex-col gap-9">
+                <SectionLanguage lang={lang} />
+                <SectionMemo
+                    title={t.portfolio.title}
+                    subtitle={t.portfolio.subtitle}
+                    body={<SectionPortfolio lang={lang} />}
+                />
+            </div>
+
+            {/* footer, dudo ponerlo*/}
+            <div className="h-[100px]"></div>
         </div>
     )
 }
