@@ -28,10 +28,10 @@ export default function HomePage({ lang = 'en' }: {
     }) => (
         <div className="flex flex-col gap-6">
             <div className="flex flex-col">
-                <Component.Text fontWeight="600" textSize="15px" color="5">
+                <Component.Text fontWeight="600" textSize="15px" color="4">
                     {title.toUpperCase()}
                 </Component.Text>
-                <Component.Text style="quote" fontWeight="600" textSize="24px" color="1">
+                <Component.Text style="quote" fontWeight="600" textSize="24px" color="5">
                     {subtitle}
                 </Component.Text>
             </div>
@@ -42,41 +42,40 @@ export default function HomePage({ lang = 'en' }: {
     if (!t) return null
     if (!t.portfolio) return null
     return (
-        <div className={styles["homepage"]}>
-            <div className="flex flex-col w-full bg-black">
-                <div className="mx-[calc(15%)] flex flex-col gap-7">
-                    {/* coso del header */}
-                    <div className="flex flex-row justify-between p-9">
-                        {/* favicon y titulo */}
-                        <div className="flex flex-row gap-3">
+        <div className="flex flex-col w-full min-h-[100vh]">
+            <div className="mx-[calc(25%)] h-full flex flex-col gap-7">
+                {/* coso del header */}
+                <div className="flex flex-row justify-between p-9">
+                    {/* favicon y titulo */}
+                    <div className="flex flex-row gap-3">
+                        <Component.Text
+                            fontWeight="500"
+                            textSize="14px"
+                            color="2"
+                        >
+                            <Image src={FaviconPNG} alt={"favicon"} width={50} height={50} />
+                        </Component.Text>
+                        <div className="flex flex-col items-start justify-center">
                             <Component.Text
                                 fontWeight="500"
                                 textSize="14px"
+                                color="1"
+                            >
+                                Santiago Paul H.
+                            </Component.Text>
+                            <Component.Text
+                                fontWeight="500"
+                                textSize="12px"
                                 color="2"
                             >
-                                <Image src={FaviconPNG} alt={"favicon"} width={50} height={50} />
+                                Desarrollador de Software
                             </Component.Text>
-                            <div className="flex flex-col items-start justify-center">
-                                <Component.Text
-                                    fontWeight="500"
-                                    textSize="14px"
-                                    color="1"
-                                >
-                                    Santiago Paul H.
-                                </Component.Text>
-                                <Component.Text
-                                    fontWeight="500"
-                                    textSize="12px"
-                                    color="2"
-                                >
-                                    Desarrollador de Software
-                                </Component.Text>
-                            </div>
                         </div>
+                    </div>
 
-                        {/* header buttons */}
-                        <div className="flex flex-row gap-9">
-                            {/* <div className="flex flex-row gap-2 items-center justify-center">
+                    {/* header buttons */}
+                    <div className="flex flex-row gap-9">
+                        {/* <div className="flex flex-row gap-2 items-center justify-center">
                                 <Component.Text
                                     fontWeight="600"
                                     textSize="12px"
@@ -86,58 +85,58 @@ export default function HomePage({ lang = 'en' }: {
                                     Building systems
                                 </Component.Text>
                             </div> */}
-                            <Component.Button
-                                action={{
-                                    type: "ref",
-                                    href: t.resume.cvUrl
-                                }}
-                                color="1"
-                                text={t.resume.cvText}
-                            />
-                        </div>
-                    </div>
-                    {/* body */}
-                    <div className="flex flex-col px-9 gap-9">
-                        <SectionHero lang={lang} />
-                        <SectionLanguage lang={lang} />
-                        <SectionMemo
-                            title={t.portfolio.title}
-                            subtitle={t.portfolio.subtitle}
-                            body={<SectionPortfolio lang={lang} />}
+                        <Component.Button
+                            action={{
+                                type: "ref",
+                                href: t.resume.cvUrl
+                            }}
+                            color="1"
+                            text={t.resume.cvText}
                         />
                     </div>
-
-                    {/* footer, dudo ponerlo*/}
-                    <div className="h-[100px]"></div>
                 </div>
-            </div>
-            {/* <div className="relative">
-                <div className={styles["background-hero-backdrop"]} />
-                <div className={styles["background-hero-foto"]} />
-            </div> */}
 
-            {/* <div className={`${styles["sections-container"]}`}>
-                <div className="w-full max-w-[1300px] px-[3.5%] flex-1 flex flex-col gap-10">
-                    <div>
-                        <SectionHero lang={lang} />
-                    </div>
-
+                {/* body */}
+                <div className="flex flex-col gap-9">
+                    <SectionHero lang={lang} />
                     <SectionLanguage lang={lang} />
-
                     <SectionMemo
                         title={t.portfolio.title}
                         subtitle={t.portfolio.subtitle}
                         body={<SectionPortfolio lang={lang} />}
                     />
-
-                    <SectionMemo
-                        title={t.futures.title}
-                        subtitle={t.futures.subtitle}
-                        body={<SectionFutures lang={lang} />}
-                    />
-
                 </div>
-            </div> */}
-        </div >
+
+                {/* footer, dudo ponerlo*/}
+                <div className="h-[100px]"></div>
+            </div>
+            {/* <div className="relative">
+                    <div className={styles["background-hero-backdrop"]} />
+                    <div className={styles["background-hero-foto"]} />
+                </div> */}
+
+            {/* <div className={`${styles["sections-container"]}`}>
+                    <div className="w-full max-w-[1300px] px-[3.5%] flex-1 flex flex-col gap-10">
+                        <div>
+                            <SectionHero lang={lang} />
+                        </div>
+    
+                        <SectionLanguage lang={lang} />
+    
+                        <SectionMemo
+                            title={t.portfolio.title}
+                            subtitle={t.portfolio.subtitle}
+                            body={<SectionPortfolio lang={lang} />}
+                        />
+    
+                        <SectionMemo
+                            title={t.futures.title}
+                            subtitle={t.futures.subtitle}
+                            body={<SectionFutures lang={lang} />}
+                        />
+    
+                    </div>
+                </div> */}
+        </div>
     )
 }

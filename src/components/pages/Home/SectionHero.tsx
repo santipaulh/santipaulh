@@ -51,7 +51,7 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
             }}
             className={`${styles["card"]} min-h-[420px] lg:min-h-[var(--homepage-firstsection-height)] relative flex flex-1 flex-col lg:flex-row`}
         >
-            <div className="flex flex-col flex-1 p-6 md:p-10">
+            <div className="flex flex-col flex-1 p-12">
                 <Component.Text color="1" textSize="35px" fontWeight="700" shadow>
                     {data.name}
                 </Component.Text>

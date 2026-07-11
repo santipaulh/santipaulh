@@ -4,6 +4,9 @@ import MarketingAgency2024 from "./portfolio-item/Marketing2024"
 import OmniInboxEmail from "./future-item/OmniInboxEmail"
 import { AvailableLanguages } from "../Data"
 
+type AvailableTechStack =
+    | "nodejs"
+
 export interface PortfolioItem {
     id: string
     title: Record<AvailableLanguages, string>

@@ -22,7 +22,7 @@ const SectionLanguage = ({ lang = 'en' }: { lang: AvailableLanguages }) => {
                     }}
                     key={`${idx}-12312321`}
                     text={item[1]}
-                    color={"1"}
+                    color={item[0] === lang ? "1" : "2"}
                     borderRadius="1"
                 />
             ))}
