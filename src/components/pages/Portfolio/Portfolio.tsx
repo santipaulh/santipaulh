@@ -207,7 +207,7 @@ export default function PortfolioPage({
                     </div>
 
                     {portfolio.tech_stack[lang].length > 0 ? (
-                        <Component.Card backgroundColor="2" className="p-6">
+                        <Component.Card color="2" className="p-6">
                             <div className="flex flex-col gap-3">
                                 <Component.Text fontWeight="600" textSize="24px" color="1">
                                     {langJson[lang].techStack}
@@ -232,7 +232,7 @@ export default function PortfolioPage({
                         </Component.Card>
                     ) : null}
                     {portfolio.core_features[lang].length > 0 ? (
-                        <Component.Card backgroundColor="2" className="p-6">
+                        <Component.Card color="2" className="p-6">
                             <div className="flex flex-col gap-3">
                                 <Component.Text fontWeight="600" textSize="24px" color="1">
                                     {langJson[lang].coreFeatures}
