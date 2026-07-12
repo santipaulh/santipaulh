@@ -11,12 +11,13 @@ const Marketing2024: PortfolioItem = {
         en: "Campaigns, chatbots, and lead generation with a practical approach."
     },
     image_src: "/portfolio-cosas/agencia-2024/Add%20a%20heading%20(26).png",
-    featured: false,
+    logo_src: "/old.cv-hero-pfp.jpg",
     youtube_intro: null,
+    icons_tech_stack: [],
     tech_stack: {
         es: [
             "GoHighLevel CRM",
-            "Botpress",
+            "Botpress", 
             "Zapier / Make",
             "Google Calendar API"
         ],

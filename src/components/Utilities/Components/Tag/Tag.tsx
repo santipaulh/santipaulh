@@ -254,6 +254,7 @@ const resolveItemIcon = (icon: keyof typeof ItemSkillIcons) => {
 const Tag = (props:
     | {
         type: "custom-skills-icon"
+        color?: "1" | "2"
         icon: keyof typeof ItemSkillIcons
     }
     | {
@@ -299,7 +300,10 @@ const Tag = (props:
         return <div
             style={{
                 border: "1px solid var(--homepage-color-5)",
-                backgroundColor: "var(--homepage-color-4)",
+                backgroundColor: ({
+                    "1": "var(--homepage-color-4)",
+                    "2": "var(--homepage-color-7)"
+                })[props.color ?? "1"],
                 borderRadius: "var(--homepage-rounded-1)"
             }}
             className="flex max-w-max flex-row items-center gap-3 px-4 py-2"

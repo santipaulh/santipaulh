@@ -1,3 +1,5 @@
+import { HTMLAttributes } from "react"
+
 const Text = ({
     color,
     textSize,
@@ -5,11 +7,13 @@ const Text = ({
     style = undefined,
     shadow = false,
     children,
-    href
+    href,
+    className
 }: {
     href?: {
         url: string
     }
+    className?: HTMLAttributes<HTMLDivElement>["className"]
     color: "1" | "2" | "3" | "4" | "5" | "gradient-1" | "gradient-2" | "gradient-3"
     textSize: string
     fontWeight: "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900"
@@ -87,6 +91,7 @@ const Text = ({
                 } : {}),
                 textShadow: shadowStyle
             }}
+            className={className}
         >
             {children}
         </div>

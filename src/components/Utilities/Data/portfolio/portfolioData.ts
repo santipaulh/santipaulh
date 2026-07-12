@@ -3,6 +3,7 @@ import EarlyDaysDiscordCommunities from "./portfolio-item/EarlyDiscord"
 import MarketingAgency2024 from "./portfolio-item/Marketing2024"
 import OmniInboxEmail from "./future-item/OmniInboxEmail"
 import { AvailableLanguages } from "../Data"
+import { ItemSkillIcons } from "../../Components/Tag/Tag"
 
 type AvailableTechStack =
     | "nodejs"
@@ -12,9 +13,10 @@ export interface PortfolioItem {
     title: Record<AvailableLanguages, string>
     slogan: Record<AvailableLanguages, string>
     image_src: string
-    featured?: boolean
+    logo_src: string
     youtube_intro: string | null
     tech_stack: Record<AvailableLanguages, string[]>
+    icons_tech_stack: (keyof typeof ItemSkillIcons)[]
     core_features: Record<AvailableLanguages, string[]>
     categories: PortfolioCategory[]
 }

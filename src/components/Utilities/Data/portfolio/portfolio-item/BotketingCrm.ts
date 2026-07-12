@@ -10,9 +10,21 @@ const BotketingCrm: PortfolioItem = {
         es: "SaaS vertical de alto rendimiento, solución CRM white-label",
         en: "High-scalable vertical SaaS, Whitelabel CRM Solution"
     },
+    logo_src: "/old.cv-hero-pfp.jpg",
     image_src: "/portfolio-cosas/botketing/Add%20a%20heading%20(29).png",
-    featured: true,
     youtube_intro: "https://www.youtube.com/watch?v=dqFhC4X13wA",
+    icons_tech_stack: [
+        "TypeScript",
+        "NodeJS",
+        "NextJS",
+        "React",
+        "Webpack",
+        "Docker",
+        "Redis",
+        "Cloudflare",
+        "PostgreSQL",
+        "Nginx"
+    ],
     tech_stack: {
         es: [
             "TypeScript",

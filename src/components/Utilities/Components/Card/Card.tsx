@@ -32,7 +32,7 @@ const Card = ({
     return (
         <div
             style={styles}
-            className={`${className} relative flex`}
+            className={`${className} flex`}
         >
             {children}
         </div>

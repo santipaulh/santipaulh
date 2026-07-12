@@ -11,8 +11,18 @@ const EarlyDiscord: PortfolioItem = {
         en: "Automation and moderation in active communities."
     },
     image_src: "/portfolio-cosas/early-discord-days/imgdiscorddays.png",
-    featured: false,
+    logo_src: "/old.cv-hero-pfp.jpg",
     youtube_intro: null,
+    icons_tech_stack: [
+        "NodeJS",
+        "JavaScript",
+        "TypeScript",
+        "Redis",
+        "MongoDB",
+        "SQLite",
+        "Docker",
+        "DiscordJS"
+    ],
     tech_stack: {
         es: [
             "Node.js",
