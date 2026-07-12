@@ -2,53 +2,37 @@ import styles from "./Card.module.css"
 import { HTMLAttributes } from "react"
 
 const Card = ({
-    backgroundColor = "1",
-    border,
-    children,
-    className
+    className,
+    color = "1",
+    children
 }: {
+    color?: "1" | "2"
     className?: HTMLAttributes<HTMLDivElement>["className"]
-    backgroundColor?: "1" | "2"
-    border?: { color: "1" | "2", showing: Array<"up" | "left" | "right" | "down"> }
     children: React.ReactNode
 }) => {
-    const bgColorMap = {
-        "1": "#FFFFFF",
-        "2": "var(--homepage-color-1)"
-    }
+    let styles: HTMLAttributes<HTMLDivElement>["style"] = {}
 
-    const borderColorMap = {
-        "1": "#FFFFFF",
-        "2": "var(--homepage-color-1)"
-    }
-
-    const borderStyles: React.CSSProperties = {}
-
-    if (border) {
-        const borderColor = borderColorMap[border.color]
-        const borderSize = "8px"
-
-        if (border.showing.includes("up")) {
-            borderStyles.borderTop = `${borderSize} solid ${borderColor}`
-        }
-        if (border.showing.includes("down")) {
-            borderStyles.borderBottom = `${borderSize} solid ${borderColor}`
-        }
-        if (border.showing.includes("left")) {
-            borderStyles.borderLeft = `${borderSize} solid ${borderColor}`
-        }
-        if (border.showing.includes("right")) {
-            borderStyles.borderRight = `${borderSize} solid ${borderColor}`
-        }
+    switch (color) {
+        case "1":
+            styles = {
+                background: "var(--homepage-color-gradient-1)",
+                borderRadius: "var(--homepage-rounded-1)",
+                border: "1px solid var(--homepage-color-2)"
+            }
+            break
+        case "2":
+            styles = {
+                background: "var(--homepage-color-6)",
+                borderRadius: "var(--homepage-rounded-1)",
+                border: "1px solid var(--homepage-color-7)"
+            }
+            break
     }
 
     return (
         <div
-            style={{
-                backgroundColor: bgColorMap[backgroundColor],
-                ...borderStyles
-            }}
-            className={`${styles["card"]} ${className} flex flex-col rounded-lg shadow-md p-6 h-full`}
+            style={styles}
+            className={`${className} relative flex`}
         >
             {children}
         </div>

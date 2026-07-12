@@ -1,5 +1,10 @@
 @reference "../../../styles/globals.css";
 
+.hero-pfp-responsive {
+    height: 100%;
+    margin:auto;
+    @apply flex flex-col items-center justify-center p-8;
+}
 
 .homepage {
     background-color: var(--homepage-bgcolor-1);
@@ -66,9 +71,6 @@
 }
 
 @media (max-width: 1024px) {
-    .background-hero-foto {
-        height: 340px;
-    }
 
     .background-hero-backdrop {
         height: 360px;
@@ -80,7 +82,17 @@
     }
 }
 
+@media (max-width: 1750px) {
+    .hero-pfp-responsive {
+        display: none;
+    }
+}
+
 @media (max-width: 640px) {
+    .hero-pfp-responsive {
+        display: none;
+    }
+
     .background-hero-foto {
         height: 280px;
     }
@@ -99,6 +111,20 @@
     .profile {
         width: 100px;
         height: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-pfp-responsive {
+        display: none;
+    }
+
+    .section_portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section_portfolio-card_container_featured {
+        min-height: 360px;
     }
 }
 
@@ -340,14 +366,4 @@
     border-color: white;
     transform: translateY(-1px);
     opacity: 0.95;
-}
-
-@media (max-width: 768px) {
-    .section_portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section_portfolio-card_container_featured {
-        min-height: 360px;
-    }
 }

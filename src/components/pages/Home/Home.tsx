@@ -29,10 +29,10 @@ export default function HomePage({ lang = 'en' }: {
         <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-3">
                 <div className="flex flex-col">
-                    <Component.Text fontWeight="600" textSize="15px" color="4">
+                    <Component.Text fontWeight="600" textSize="15px" color="gradient-3">
                         {title.toUpperCase()}
                     </Component.Text>
-                    <Component.Text style="quote" fontWeight="600" textSize="24px" color="2">
+                    <Component.Text style="quote" fontWeight="600" textSize="24px" color="1">
                         {subtitle}
                     </Component.Text>
                 </div>
@@ -45,19 +45,12 @@ export default function HomePage({ lang = 'en' }: {
     if (!t) return null
     if (!t.portfolio) return null
     return (
-        <div className="h-full flex flex-col gap-7">
+        <div className="h-full flex flex-col gap-7 bg-black min-h-[100vh]">
             {/* contenedor header + hero */}
-            <div className="relative flex flex-col flex-1 gap-24">
+            <div className="relative flex flex-col">
                 {/* coso del header */}
                 <div className="absolute flex h-[120px] w-full top-[10%] bg-black" />
-                <div
-                    style={{ 
-                        borderTopLeftRadius: "0",
-                        borderTopRightRadius: "0",
-                        borderRadius: "var(--homepage-rounded-1)",
-                        background: "var(--homepage-color-gradient-1)"
-                    }}
-                    className="z-10 mx-[calc(25%)] py-9 px-6 flex flex-1 flex-row justify-between">
+                <Component.Card className="mx-[calc(25%)] my-6 py-4 px-6 flex flex-row justify-between">
                     {/* favicon y titulo */}
                     <div className="flex flex-row gap-3">
                         <Component.Text
@@ -78,7 +71,7 @@ export default function HomePage({ lang = 'en' }: {
                             <Component.Text
                                 fontWeight="500"
                                 textSize="12px"
-                                color="5"
+                                color="gradient-3"
                             >
                                 Desarrollador de Software
                             </Component.Text>
@@ -106,7 +99,7 @@ export default function HomePage({ lang = 'en' }: {
                             text={t.resume.cvText}
                         />
                     </div>
-                </div>
+                </Component.Card>
                 <SectionHero lang={lang} />
             </div>
 

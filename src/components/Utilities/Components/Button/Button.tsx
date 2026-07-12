@@ -28,13 +28,13 @@ const Button = ({
     })[borderRadius]
     const colorStyleMap: Record<"1" | "2", React.CSSProperties> = {
         "1": {
-            background: "var(--homepage-color-gradient-1)",
+            background: "var(--homepage-color-1)",
             border: "none",
             borderRadius: borderRadiusX
         },
         "2": {
-            backgroundColor: "rgba(255, 255, 255, 0.18)",
-            border: "1px solid #FFFFFF",
+            background: "var(--homepage-color-6)",
+            border: "none",
             borderRadius: borderRadiusX
         }
     }

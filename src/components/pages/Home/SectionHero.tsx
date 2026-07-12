@@ -19,6 +19,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import Component from "@/components/Utilities/Component"
 import { AvailableLanguages, Data } from "@/components/Utilities/Data/Data"
+import { ItemSkillIcons } from "@/components/Utilities/Components/Tag/Tag"
+import Image from "next/image"
 
 const FontAwesomeIcon = dynamic(
     () => import("@fortawesome/react-fontawesome").then(x => x.FontAwesomeIcon),
@@ -41,42 +43,48 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
         faGlobeAmericas: faGlobeAmericas
     }
 
+    const skilliconsMap: (keyof typeof ItemSkillIcons)[] = [
+        "TypeScript",
+        "JavaScript",
+        "Java",
+        "Python",
+        "PHP"
+    ]
+
     return (
         <div className="relative">
             <div
-            style={{ background: "var(--homepage-color-gradient-1)",}}
-            className="absolute w-full h-[75%] top-[10%]"
+                style={{ background: "var(--homepage-color-gradient-1)", }}
+                className="absolute w-full h-[75%] top-[10%]"
             />
-            <div
-                style={{
-                    background: "var(--homepage-color-gradient-1)",
-                    borderRadius: "var(--homepage-rounded-1)",
-                    border: "1px solid var(--homepage-color-2)",
-                    overflow: "hidden"
-                }}
-                className={`${styles["card"]} mx-[calc(25%)] min-h-[420px] relative flex flex-1 flex-col lg:flex-row`}
+            <Component.Card
+                className="mx-[calc(25%)]"
             >
                 <div className="flex flex-col flex-1 p-12">
-                    <Component.Text color="1" textSize="35px" fontWeight="700" shadow>
-                        {data.name}
-                    </Component.Text>
-                    <div style={{ marginTop: "-8px" }}>
-                        <Component.Text color="5" textSize="20px" fontWeight="600" shadow>
-                            {data.title}
-                        </Component.Text>
-                    </div>
-                    <div className="my-[30px] overflow-y-auto flex flex-col gap-2">
-                        {data.items.map((x, idx) => (
-                            <div key={`dsqweeqweqwqewqeqwewq-${idx}`} className={`flex flex-row gap-2 items-center`}>
-                                <FontAwesomeIcon
-                                    width={18}
-                                    height={18}
-                                    icon={iconMap[x.icon]}
-                                    className={`${styles["text-text-1"]} text-[15px]`}
-                                />
-
-                                <Component.Text color="1" textSize="15px" fontWeight="400">{x.text}</Component.Text>
+                    <div className="flex flex-col gap-4">
+                        <Component.Tag
+                            type="text-with-ball"
+                            ballColor="1"
+                            text="Disponible para nuevos proyectos"
+                        />
+                        <div className="flex flex-col gap-2">
+                            <Component.Text color="1" textSize="35px" fontWeight="700" shadow>
+                                {data.name}
+                            </Component.Text>
+                            <div style={{ marginTop: "-8px", width: "100%" }}>
+                                <Component.Text color="gradient-2" textSize="20px" fontWeight="700" shadow>
+                                    {data.title}
+                                </Component.Text>
                             </div>
+                        </div>
+                    </div>
+                    <div className="my-[30px] overflow-y-auto flex gap-1 flex-wrap">
+                        {skilliconsMap.map((x, idx) => (
+                            <Component.Tag
+                            key={`${idx}-dsadfda12312331`}
+                                icon={x}
+                                type="custom-skills-icon"
+                            />
                         ))}
                     </div>
                     <div className="mt-auto flex flex-col gap-[12px] sm:flex-row sm:items-center">
@@ -123,7 +131,29 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
                         </div>
                     </div>
                 </div>
-                <div className="relative hidden lg:block w-full lg:w-auto">
+                <div className={`${styles['hero-pfp-responsive']} `}>
+                    <div
+                        className={`p-[10px] flex flex-row justify-center items-center`}
+                        style={{
+                            boxShadow: "0px 0px 16px 1px rgba(var(--homepage-color-3-rgb), 0.3)",
+                            // backgroundColor: "var(--homepage-color-2)",
+                            borderRadius: "var(--homepage-rounded-3)"
+                        }}
+                    >
+                        <Image
+                            src={"/old.cv-hero-pfp.jpg"}
+                            alt="Mi cara"
+                            width={1750}
+                            height={1750}
+                            style={{
+                            boxShadow: "0px 0px 25px -10px var(--homepage-color-3)",
+                                borderRadius: "var(--homepage-rounded-3)"
+                            }}
+                            className="w-full 2xl:h-[350px] xl:h-[250px]"
+                        />
+                    </div>
+                </div>
+                {/* <div className="relative hidden lg:block w-full lg:w-auto">
                     <div
                         className={styles["profile"]}
                     />
@@ -132,8 +162,8 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
                         alt="Mi cara"
                         className="relative z-1 self-end cover w-full h-[320px] md:h-[420px] lg:h-[var(--homepage-firstsection-height)]"
                     />
-                </div>
-            </div>
+                </div> */}
+            </Component.Card>
         </div>
     )
 }

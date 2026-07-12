@@ -2,7 +2,7 @@
   "en": {
     "hero": {
       "name": "Santiago Paul H.",
-      "title": "Software Developer",
+      "title": "Full Stack Engineer specialized in SaaS, CRMs and Automatization and AI",
       "items": [
         {
           "icon": "faBirthdayCake",
@@ -28,7 +28,7 @@
     },
     "portfolio": {
       "title": "Portfolio",
-      "subtitle": "What I've been working on lately",
+      "subtitle": "Featured projects",
       "knowMore": "See More"
     },
     "futures": {
@@ -43,7 +43,7 @@
   "es": {
     "hero": {
       "name": "Santiago Paul H.",
-      "title": "Desarrollador de Software",
+      "title": "Ingeniero Full Stack especializado en SaaS, CRMs y Automatizacion e IA",
       "items": [
         {
           "icon": "faBirthdayCake",
@@ -69,7 +69,7 @@
     },
     "portfolio": {
       "title": "Portafolio",
-      "subtitle": "En lo que he estado trabajando últimamente",
+      "subtitle": "Proyectos destacados",
       "knowMore": "Conocer Más"
     },
     "futures": {
