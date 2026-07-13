@@ -112,16 +112,14 @@ const PortfolioCard = ({
 
                 <div className="flex flex-col items-start gap-2">
                     {item.bullets.map((bullet, idx) => (
-                        <Component.Text
+                        <Component.Tag
                             key={`${idx}-portfolio-bullet`}
-                            fontWeight="400"
-                            textSize="14px"
-                            color="1"
-                            style="checkmark"
-                            styleColor="2"
+                            type="text-with-ball"
+                            ballColor="2"
+                            bgColor="2"
+                            text={bullet}
                         >
-                            {bullet}
-                        </Component.Text>
+                        </Component.Tag>
                     ))}
                 </div>
             </div>

@@ -73,63 +73,86 @@ const Marketing2024: PortfolioItem = {
                     en: "Results"
                 },
                 subtitle: {
-                    es: "Resultados medibles de campañas y clientes tempranos.",
-                    en: "Measurable campaign results and early clients."
+                    es: "Clientes del rubro veterinario, odontologico y pedagogico.",
+                    en: "Clients from veterinary, dental, and educational sectors."
                 },
                 items: [
                     {
                         title: {
-                            es: "Captación de leads",
-                            en: "Lead generation"
+                            es: "Veterinaria Las Lomas",
+                            en: "Veterinaria Las Lomas"
                         },
                         subtitle: {
-                            es: "Campañas orientadas a conversion y seguimiento automatizado.",
-                            en: "Campaigns focused on conversion and automated follow-up."
+                            es: "Automatización de chats de WhatsApp y captación con Meta Ads.",
+                            en: "WhatsApp chat automation and lead acquisition with Meta Ads."
                         },
-                        image_src: "/portfolio-cosas/agencia-2024/Add%20a%20heading%20(26).png",
+                        image_src: "/portfolio-cosas/agencia-2024/Add%20a%20heading%20(24).png",
                         bullets: {
                             es: [
-                                "Aporté automatizaciones de captura y seguimiento para reducir fricción en la venta.",
-                                "Se priorizó la rapidez de implementación sobre procesos demasiado complejos."
+                                "Fue mi primer cliente; empezamos durante los apagones de Ecuador 2024, cuando hubo menos servicio y más emergencias domésticas en pacientes.",
+                                "En 2 semanas se lograron 48 mensajes y 20 consultas confirmadas.",
+                                "Costo por lead: $3.27, inversión total: $157.12 USD.",
+                                "Cada consulta cuesta $50 y los servicios parten desde $75.",
+                                "Ingreso directo aproximado por consultas: $1,000; potencial total estimado superior a $2,500 considerando servicios mínimos."
                             ],
                             en: [
-                                "I contributed capture and follow-up automations to reduce friction in the sales process.",
-                                "The priority was speed of implementation over overly complex workflows."
+                                "This was my first client; we started during Ecuador's 2024 blackouts, when service availability dropped and domestic pet emergencies increased.",
+                                "In 2 weeks we achieved 48 messages and 20 confirmed consultations.",
+                                "Cost per lead: $3.27, total ad spend: $157.12 USD.",
+                                "Each consultation costs $50 and services start from $75.",
+                                "Approx. direct revenue from consultations: $1,000; estimated potential above $2,500 considering minimum service value."
                             ]
                         },
                         links: [],
                         gallery: []
-                    }
-                ]
-            },
-            {
-                title: {
-                    es: "Antecedentes",
-                    en: "Background"
-                },
-                subtitle: {
-                    es: "Contexto temprano de la agencia y su enfoque en la automatización.",
-                    en: "Early context of the agency and its focus on automation."
-                },
-                items: [
+                    },
                     {
                         title: {
-                            es: "Operación inicial",
-                            en: "Initial operation"
+                            es: "Guarderia Danny Kids",
+                            en: "Danny Kids Daycare"
                         },
                         subtitle: {
-                            es: "Estructura inicial para marketing, CRM y soporte de clientes.",
-                            en: "Initial setup for marketing, CRM, and customer support."
+                            es: "Campaña de captación acelerada para centro pedagogico infantil.",
+                            en: "Accelerated lead campaign for a child education center."
                         },
                         image_src: "/portfolio-cosas/agencia-2024/Add%20a%20heading%20(26).png",
                         bullets: {
                             es: [
-                                "La agencia combinó herramientas de CRM con automatización para minimizar tareas manuales.",
-                                "El foco era lograr resultados prácticos con menos sobrecarga operativa."
+                                "Se consiguieron 50 leads en menos de 4 días.",
+                                "Costo por lead de $0.43 con inversión total de $21.43.",
+                                "Cada cliente costaba $20 y aproximadamente el 75% de los leads se convirtió a clientes."
                             ],
                             en: [
-                                "The agency combined CRM tools with automation to minimize manual tasks.",
-                                "The focus was on achieving practical results with less operational overhead."
+                                "50 leads were generated in under 4 days.",
+                                "Cost per lead was $0.43 with a total spend of $21.43.",
+                                "Each customer ticket was $20 and approximately 75% of leads converted into clients."
+                            ]
+                        },
+                        links: [],
+                        gallery: []
+                    },
+                    {
+                        title: {
+                            es: "Dr Julio Moncayo",
+                            en: "Dr Julio Moncayo"
+                        },
+                        subtitle: {
+                            es: "Gestión de cuenta odontologica y crecimiento orgánico.",
+                            en: "Dental account management and organic growth."
+                        },
+                        image_src: "/portfolio-cosas/agencia-2024/Screenshot%202026-07-01%20192855.png",
+                        bullets: {
+                            es: [
+                                "Manejo de cuenta del odontologo Dr Julio Moncayo.",
+                                "Más de 1052 publicaciones acumuladas en la cuenta.",
+                                "En el último mes contribuí con más de 50 publicaciones orgánicas.",
+                                "Caso de estudio relativamente nuevo en fase de seguimiento."
+                            ],
+                            en: [
+                                "I manage Dr Julio Moncayo's dental account.",
+                                "The account has over 1,052 total posts.",
+                                "In the last month, I contributed more than 50 organic posts.",
+                                "This is a relatively new case study currently under follow-up."
                             ]
                         },
                         links: [],
