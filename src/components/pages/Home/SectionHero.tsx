@@ -19,8 +19,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import Component from "@/components/Utilities/Component"
 import { AvailableLanguages, Data } from "@/components/Utilities/Data/Data"
-import { ItemSkillIcons } from "@/components/Utilities/Components/Tag/Tag"
 import Image from "next/image"
+import { ItemSkillIcons } from "@/components/Utilities/Data/icons/icons"
 
 const FontAwesomeIcon = dynamic(
     () => import("@fortawesome/react-fontawesome").then(x => x.FontAwesomeIcon),
