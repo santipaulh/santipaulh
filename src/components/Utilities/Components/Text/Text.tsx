@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCheck } from "@fortawesome/free-solid-svg-icons"
+import { faCheck, faChevronDown } from "@fortawesome/free-solid-svg-icons"
 
 const Text = ({
     color,
@@ -11,7 +11,9 @@ const Text = ({
     children,
     href,
     styleColor,
-    className
+    className,
+    onClick,
+    dropoutOpen
 }: {
     href?: {
         url: string
@@ -20,9 +22,11 @@ const Text = ({
     color: "1" | "2" | "3" | "4" | "5" | "gradient-1" | "gradient-2" | "gradient-3"
     textSize: string
     fontWeight: "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900"
-    style?: "quote" | "bullet-point" | "checkmark"
-    styleColor?: "1" | "2"
+    style?: "quote" | "bullet-point" | "checkmark" | "dropout"
+    styleColor?: "1" | "2" | "gradient-1" | "gradient-2" | "gradient-3"
     shadow?: boolean
+    onClick?: HTMLAttributes<HTMLDivElement>["onClick"]
+    dropoutOpen?: boolean
     children: React.ReactNode
 }) => {
     const colorMap = {
@@ -45,7 +49,10 @@ const Text = ({
     const shadowStyle = shadow ? "2px 2px 4px rgba(0, 0, 0, 0.29)" : "none"
     const styleColorMap = {
         "1": "var(--homepage-color-1)",
-        "2": "var(--homepage-color-3)"
+        "2": "var(--homepage-color-3)",
+        "gradient-1": "var(--homepage-color-gradient-1)",
+        "gradient-2": "var(--homepage-color-gradient-2)",
+        "gradient-3": "var(--homepage-color-gradient-3)",
     }, styleColorResult = styleColorMap[styleColor ?? "1"]
 
     if (style === "quote") {
@@ -130,6 +137,38 @@ const Text = ({
                     />
                 </span>
                 <div>{children}</div>
+            </div>
+        )
+    }
+
+    if (style === "dropout") {
+        return (
+            <div
+                onClick={onClick}
+                style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    gap: "12px",
+                    cursor: "pointer",
+                    userSelect: "none",
+                    color: colorMap[color],
+                    fontSize: textSize,
+                    fontWeight,
+                    textShadow: shadowStyle
+                }}
+                className={className}
+            >
+                <div>{children}</div>
+                <FontAwesomeIcon
+                    icon={faChevronDown}
+                    style={{
+                        fontSize: "12px",
+                        transform: dropoutOpen ? "rotate(180deg)" : "rotate(0deg)",
+                        transition: "transform 180ms ease"
+                    }}
+                />
             </div>
         )
     }

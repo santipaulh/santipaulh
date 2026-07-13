@@ -6,6 +6,7 @@ import SectionPortfolio from "./SectionPortfolio"
 import SectionFutures from "./SectionFutures"
 import { ReactNode } from "react"
 import SectionLanguage from "./SectionLanguage"
+import SectionTechSkills from "./SectionTechSkills"
 import Component from "@/components/Utilities/Component"
 import { AvailableLanguages } from "@/components/Utilities/Data/Data"
 import { faDownload } from "@fortawesome/free-solid-svg-icons"
@@ -111,6 +112,11 @@ export default function HomePage({ lang = 'en' }: {
                     subtitle={t.portfolio.subtitle}
                     body={<SectionPortfolio lang={lang} />}
                 />
+                {/* se ve horrible <SectionMemo
+                    title={t.techSkills.title}
+                    subtitle={t.techSkills.description}
+                    body={<SectionTechSkills lang={lang} />}
+                /> */}
             </div>
 
             {/* footer, dudo ponerlo*/}

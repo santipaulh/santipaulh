@@ -20,7 +20,24 @@ type KnownTechStackType = KnownTechStackItem[]
 const KnownTechStack: Record<AvailableLanguages, KnownTechStackType> = {
     en: [
         {
-            category: "backend",
+            category: "Languages",
+            icons: [
+                { type: "skill-icon", icon: "TypeScript" },
+                { type: "skill-icon", icon: "JavaScript" }
+            ]
+        },
+        {
+            category: "Frontend",
+            icons: [
+                { type: "skill-icon", icon: "React" },
+                { type: "skill-icon", icon: "NextJS" },
+                { type: "skill-icon", icon: "Webpack" },
+                { type: "text", text: "TanStack React Query" },
+                { type: "text", text: "HTML5" }
+            ]
+        },
+        {
+            category: "Backend",
             icons: [
                 { type: "skill-icon", icon: "NodeJS" },
                 { type: "skill-icon", icon: "Nginx" },
@@ -33,24 +50,7 @@ const KnownTechStack: Record<AvailableLanguages, KnownTechStackType> = {
             ]
         },
         {
-            category: "frontend",
-            icons: [
-                { type: "skill-icon", icon: "React" },
-                { type: "skill-icon", icon: "NextJS" },
-                { type: "skill-icon", icon: "Webpack" },
-                { type: "text", text: "TanStack React Query" },
-                { type: "text", text: "HTML5" }
-            ]
-        },
-        {
-            category: "languages",
-            icons: [
-                { type: "skill-icon", icon: "TypeScript" },
-                { type: "skill-icon", icon: "JavaScript" }
-            ]
-        },
-        {
-            category: "bases de datos",
+            category: "Databases",
             icons: [
                 { type: "skill-icon", icon: "PostgreSQL" },
                 { type: "skill-icon", icon: "MongoDB" },
@@ -59,7 +59,7 @@ const KnownTechStack: Record<AvailableLanguages, KnownTechStackType> = {
             ]
         },
         {
-            category: "devops",
+            category: "DevOps",
             icons: [
                 { type: "skill-icon", icon: "Docker" },
                 { type: "skill-icon", icon: "Cloudflare" },
@@ -69,7 +69,7 @@ const KnownTechStack: Record<AvailableLanguages, KnownTechStackType> = {
             ]
         },
         {
-            category: "otros",
+            category: "Others",
             icons: [
                 { type: "text", text: "Botpress" },
                 { type: "text", text: "Zapier" },
@@ -83,7 +83,24 @@ const KnownTechStack: Record<AvailableLanguages, KnownTechStackType> = {
     ],
     es: [
         {
-            category: "backend",
+            category: "Lenguajes",
+            icons: [
+                { type: "skill-icon", icon: "TypeScript" },
+                { type: "skill-icon", icon: "JavaScript" }
+            ]
+        },
+        {
+            category: "Frontend",
+            icons: [
+                { type: "skill-icon", icon: "React" },
+                { type: "skill-icon", icon: "NextJS" },
+                { type: "skill-icon", icon: "Webpack" },
+                { type: "text", text: "TanStack React Query" },
+                { type: "text", text: "HTML5" }
+            ]
+        },
+        {
+            category: "Backend",
             icons: [
                 { type: "skill-icon", icon: "NodeJS" },
                 { type: "skill-icon", icon: "Nginx" },
@@ -96,23 +113,6 @@ const KnownTechStack: Record<AvailableLanguages, KnownTechStackType> = {
             ]
         },
         {
-            category: "frontend",
-            icons: [
-                { type: "skill-icon", icon: "React" },
-                { type: "skill-icon", icon: "NextJS" },
-                { type: "skill-icon", icon: "Webpack" },
-                { type: "text", text: "TanStack React Query" },
-                { type: "text", text: "HTML5" }
-            ]
-        },
-        {
-            category: "languages",
-            icons: [
-                { type: "skill-icon", icon: "TypeScript" },
-                { type: "skill-icon", icon: "JavaScript" }
-            ]
-        },
-        {
             category: "bases de datos",
             icons: [
                 { type: "skill-icon", icon: "PostgreSQL" },
@@ -122,7 +122,7 @@ const KnownTechStack: Record<AvailableLanguages, KnownTechStackType> = {
             ]
         },
         {
-            category: "devops",
+            category: "DevOps",
             icons: [
                 { type: "skill-icon", icon: "Docker" },
                 { type: "skill-icon", icon: "Cloudflare" },

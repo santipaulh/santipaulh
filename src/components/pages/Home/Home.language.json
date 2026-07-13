@@ -31,6 +31,10 @@
       "subtitle": "Featured projects",
       "knowMore": "See More"
     },
+    "techSkills": {
+      "title": "Tech Stack",
+      "description": "Technologies I Work With."
+    },
     "futures": {
       "title": "Future projects",
       "subtitle": "In progress of a minimum viable product (MVP)",
@@ -71,6 +75,10 @@
       "title": "Portafolio",
       "subtitle": "Proyectos destacados",
       "knowMore": "Conocer Más"
+    },
+    "techSkills": {
+      "title": "Stack tecnológico",
+      "description": "Tecnologías que manejo."
     },
     "futures": {
       "title": "Proyectos futuros",
