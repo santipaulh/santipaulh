@@ -50,7 +50,7 @@ export default function HomePage({ lang = 'en' }: {
             <div className="relative flex flex-col">
                 {/* coso del header */}
                 <div className="absolute flex h-[120px] w-full top-[10%] bg-black" />
-                <Component.Card className="relative mx-[calc(25%)] my-6 py-4 px-6 flex flex-row justify-between">
+                <Component.Card className="relative mx-[var(--homepage-width-danger-zone)] my-6 py-4 px-6 flex flex-row justify-between">
                     {/* favicon y titulo */}
                     <div className="flex flex-row gap-3">
                         <Component.Text
@@ -104,7 +104,7 @@ export default function HomePage({ lang = 'en' }: {
             </div>
 
             {/* body */}
-            <div className="mx-[calc(25%)] flex flex-col gap-9">
+            <div className="mx-[var(--homepage-width-danger-zone)] flex flex-col gap-9">
                 <SectionLanguage lang={lang} />
                 <SectionMemo
                     title={t.portfolio.title}

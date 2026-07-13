@@ -58,7 +58,7 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
                 className="absolute w-full h-[75%] top-[10%]"
             />
             <Component.Card
-                className="relative mx-[calc(25%)]"
+                className="relative mx-[var(--homepage-width-danger-zone)]"
             >
                 <div className="flex flex-col flex-1 p-12">
                     <div className="flex flex-col gap-4">

@@ -1,4 +1,6 @@
 import { HTMLAttributes } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCheck } from "@fortawesome/free-solid-svg-icons"
 
 const Text = ({
     color,
@@ -8,6 +10,7 @@ const Text = ({
     shadow = false,
     children,
     href,
+    styleColor,
     className
 }: {
     href?: {
@@ -17,7 +20,8 @@ const Text = ({
     color: "1" | "2" | "3" | "4" | "5" | "gradient-1" | "gradient-2" | "gradient-3"
     textSize: string
     fontWeight: "100" | "200" | "300" | "400" | "500" | "600" | "700" | "800" | "900"
-    style?: "quote" | "bullet-point"
+    style?: "quote" | "bullet-point" | "checkmark"
+    styleColor?: "1" | "2"
     shadow?: boolean
     children: React.ReactNode
 }) => {
@@ -39,12 +43,16 @@ const Text = ({
     }
 
     const shadowStyle = shadow ? "2px 2px 4px rgba(0, 0, 0, 0.29)" : "none"
+    const styleColorMap = {
+        "1": "var(--homepage-color-1)",
+        "2": "var(--homepage-color-3)"
+    }, styleColorResult = styleColorMap[styleColor ?? "1"]
 
     if (style === "quote") {
         return (
             <div
                 style={{
-                    borderLeft: "4px solid var(--homepage-color-1)",
+                    borderLeft: `4px solid ${styleColorResult}`,
                     paddingLeft: "16px",
                     color: colorMap[color],
                     fontSize: textSize,
@@ -72,7 +80,55 @@ const Text = ({
                     textShadow: shadowStyle
                 }}
             >
-                <span>•</span>
+                <span style={{
+                    color: styleColorResult
+                }}>
+                    •
+                </span>
+                <div>{children}</div>
+            </div>
+        )
+    }
+
+    if (style === "checkmark") {
+        return (
+            <div
+                style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    gap: "12px",
+                    alignItems: "center",
+                    color: colorMap[color],
+                    fontSize: textSize,
+                    fontWeight,
+                    textShadow: shadowStyle
+                }}
+            >
+                <span
+                    style={{
+                        width: "16px",
+                        height: "16px",
+                        minWidth: "16px",
+                        borderRadius: "999px",
+                        border: `0px solid ${styleColorResult}`,
+                        backgroundColor: styleColorResult,
+                        color: "transparent",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        alignSelf: "center",
+                        lineHeight: 1
+                    }}
+                >
+                    <FontAwesomeIcon
+                        icon={faCheck}
+                        style={{
+                            fontSize: "10px",
+                            fontWeight:"900",
+                            color: "var(--homepage-color-6)"
+                        }}
+                    />
+                </span>
                 <div>{children}</div>
             </div>
         )

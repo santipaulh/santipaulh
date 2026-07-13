@@ -18,28 +18,26 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
         return (
             <Component.Card
                 color="1"
-                className="flex flex-row"
+                className={styles["section_portfolio-item_card"]}
             >
-                <Image
-                    src={props.item.image_src}
-                    width={1920}
-                    height={1080}
-                    alt="Image"
-                    style={{
-                        opacity: 1,
-                        width: "450px",
-                        height: "max",
-                        objectFit: "cover"
-                    }}
-                />
                 <div
-                    className="flex flex-col"
-                    style={{
-                        flex: 1,
-                        padding: "28px",
-                        gap: "28px",
-                        justifyContent: "space-between"
-                    }}
+                    className={styles["section_portfolio-item_media"]}
+                >
+                    <Component.Card
+                        color="2"
+                        className={styles["section_portfolio-item_mediaCard"]}
+                    >
+                        <Image
+                            src={props.item.image_src}
+                            width={1920}
+                            height={1080}
+                            alt="Image"
+                            className={styles["section_portfolio-item_image"]}
+                        />
+                    </Component.Card>
+                </div>
+                <div
+                    className={`flex flex-col ${styles["section_portfolio-item_content"]}`}
                 >
                     <div
                         className="flex flex-col"
@@ -94,9 +92,11 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                                         <Component.Text
                                             textSize="13px"
                                             color="1"
+                                            style="checkmark"
                                             fontWeight="400"
+                                            styleColor="2"
                                         >
-                                            {`• ${featureText}`}
+                                            {featureText}
                                         </Component.Text>
                                     </div>
                                 ))}

@@ -2,7 +2,7 @@ import BotketingCrm from "./portfolio-item/BotketingCrm"
 import EarlyDaysDiscordCommunities from "./portfolio-item/EarlyDiscord"
 import MarketingAgency2024 from "./portfolio-item/Marketing2024"
 import { AvailableLanguages } from "../Data"
-import { ItemSkillIcons } from "../../Components/Tag/Tag"
+import { ItemSkillIcons } from "../icons/icons"
 
 type AvailableTechStack =
     | "nodejs"

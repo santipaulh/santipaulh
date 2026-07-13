@@ -319,6 +319,56 @@
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
+.section_portfolio-item_card {
+    display: flex;
+    flex-direction: row;
+}
+
+.section_portfolio-item_media {
+    width: 450px;
+    min-width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+}
+
+.section_portfolio-item_mediaCard {
+    width: 100%;
+    display: flex;
+}
+
+.section_portfolio-item_image {
+    opacity: 1;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+}
+
+.section_portfolio-item_content {
+    flex: 1;
+    padding: 28px;
+    gap: 28px;
+    justify-content: space-between;
+}
+
+@media (max-width: 980px) {
+    .section_portfolio-item_card {
+        flex-direction: column;
+    }
+
+    .section_portfolio-item_media {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .section_portfolio-item_image {
+        max-width: 100%;
+    }
+}
+
 .section_portfolio-card_badge {
     position: absolute;
     left: 1rem;
