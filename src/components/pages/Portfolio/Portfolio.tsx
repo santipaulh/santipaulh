@@ -17,6 +17,26 @@ type PortfolioCardContent = {
     links?: PortfolioLink[]
 }
 
+const toYouTubeEmbedUrl = (url: string): string | null => {
+    try {
+        const parsedUrl = new URL(url)
+
+        if (parsedUrl.hostname.includes("youtu.be")) {
+            const idFromPath = parsedUrl.pathname.replace("/", "")
+            return idFromPath ? `https://www.youtube.com/embed/${idFromPath}` : null
+        }
+
+        if (parsedUrl.hostname.includes("youtube.com")) {
+            const watchId = parsedUrl.searchParams.get("v")
+            if (watchId) return `https://www.youtube.com/embed/${watchId}`
+        }
+
+        return null
+    } catch {
+        return null
+    }
+}
+
 const PortfolioCard = ({
     item,
     color = "1",
@@ -219,6 +239,10 @@ export default function PortfolioPage({
 
     if (!portfolio) return null
 
+    const youtubeEmbedUrl = portfolio.presentation.youtube_intro
+        ? toYouTubeEmbedUrl(portfolio.presentation.youtube_intro)
+        : null
+
     return (
         <div className="flex min-h-screen flex-col gap-8 bg-black pb-12">
             <div className="relative flex flex-col">
@@ -321,6 +345,31 @@ export default function PortfolioPage({
             </div>
 
             <div className="mx-(--homepage-width-danger-zone) flex flex-col gap-8">
+
+                {youtubeEmbedUrl ? (
+                    <Component.Card
+                        color="2"
+                        className="p-6 flex-col gap-3"
+                    >
+                        <Component.Text
+                            fontWeight="600"
+                            textSize="24px"
+                            color="1"
+                        >
+                            {lang === "es" ? "Video de introduccion" : "Introduction video"}
+                        </Component.Text>
+                        <div className="overflow-hidden rounded-(--homepage-rounded-1)">
+                            <iframe
+                                src={youtubeEmbedUrl}
+                                title={lang === "es" ? "Video de YouTube" : "YouTube video"}
+                                className="aspect-video w-full"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                            />
+                        </div>
+                    </Component.Card>
+                ) : null}
 
                 {portfolio.data.tech_stack[lang].length > 0 ? (
                     <Component.Card

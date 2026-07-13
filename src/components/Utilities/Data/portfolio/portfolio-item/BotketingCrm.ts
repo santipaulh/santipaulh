@@ -33,7 +33,7 @@ const BotketingCrm: PortfolioItem = {
         },
         image_src: "/portfolio-cosas/botketing/Add%20a%20heading%20(29).png",
         logo_src: "/old.cv-hero-pfp.jpg",
-        youtube_intro: "https://www.youtube.com/watch?v=dqFhC4X13wA",
+        youtube_intro: null,
         tag: {
             es: "Proyecto independiente",
             en: "Solo project"
