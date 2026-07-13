@@ -27,7 +27,10 @@ const SectionTechSkills = ({ lang }: { lang: AvailableLanguages }) => {
                         </div>
 
                         <div className="flex flex-row flex-wrap gap-2 flex-1 justify-end">
-                            {category.icons.map((item, index) => {
+                            {category.icons.sort((x, y) =>
+                                (x.type === "skill-icon" ? 1 : 0)
+                                - (y.type === "skill-icon" ? 1 : 0)
+                            ).map((item, index) => {
                                 if (item.type === "skill-icon") {
                                     return (
                                         <Component.Tag

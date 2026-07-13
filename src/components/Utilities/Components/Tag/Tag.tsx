@@ -64,9 +64,10 @@ const Tag = (props:
         const iconData = resolveItemIcon(props.icon)
         const bgColorMap: Record<"1" | "2" | "3", string> = {
             "1": "var(--homepage-color-4)",
-            "2": "var(--homepage-color-7)",
+            "2": "var(--homepage-color-2)",
             "3": "transparent"
         }
+        
 
         return <div
             style={{

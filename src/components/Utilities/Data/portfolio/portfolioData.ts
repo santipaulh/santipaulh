@@ -2,24 +2,39 @@ import BotketingCrm from "./portfolio-item/BotketingCrm"
 import EarlyDaysDiscordCommunities from "./portfolio-item/EarlyDiscord"
 import MarketingAgency2024 from "./portfolio-item/Marketing2024"
 import { AvailableLanguages } from "../Data"
-import { ItemSkillIcons } from "../icons/icons"
+import { ItemSkillIconsKeys } from "../icons/icons"
 
-type AvailableTechStack =
-    | "nodejs"
+export type PortfolioTechStackItem =
+    | {
+        type: "skill-icons"
+        icon: ItemSkillIconsKeys
+    }
+    | {
+        type: "text"
+        text: string
+    }
 
-export interface PortfolioItem {
-    id: string
+export interface PortfolioPresentation {
     title: Record<AvailableLanguages, string>
+    description: Record<AvailableLanguages, string>
     slogan: Record<AvailableLanguages, string>
     simple_featured_features: Record<AvailableLanguages, string[]>
     image_src: string
     logo_src: string
     youtube_intro: string | null
-    tech_stack: Record<AvailableLanguages, string[]>
-    icons_tech_stack: (keyof typeof ItemSkillIcons)[]
     tag: Record<AvailableLanguages, string>
+}
+
+export interface PortfolioDataBlock {
+    tech_stack: Record<AvailableLanguages, PortfolioTechStackItem[]>
     core_features: Record<AvailableLanguages, string[]>
     categories: PortfolioCategory[]
+}
+
+export interface PortfolioItem {
+    id: string
+    presentation: PortfolioPresentation
+    data: PortfolioDataBlock
 }
 
 export interface PortfolioLink {
@@ -43,6 +58,7 @@ export interface PortfolioSectionItem {
         image_src: string
         title: Record<AvailableLanguages, string>
         bullets: Record<AvailableLanguages, string[]>
+        links: PortfolioLink[]
     }[]
 }
 

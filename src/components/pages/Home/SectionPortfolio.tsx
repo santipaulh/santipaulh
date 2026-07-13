@@ -15,6 +15,9 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
     const ItemCard = (props: {
         item: PortfolioItem
     }) => {
+        const presentation = props.item.presentation
+        const data = props.item.data
+
         return (
             <Component.Card
                 color="1"
@@ -28,7 +31,7 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                         className={styles["section_portfolio-item_mediaCard"]}
                     >
                         <Image
-                            src={props.item.image_src}
+                            src={presentation.image_src}
                             width={1920}
                             height={1080}
                             alt="Image"
@@ -52,14 +55,14 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                                 type="text-with-ball"
                                 ballColor="1"
                                 bgColor="2"
-                                text={props.item.tag[lang]}
+                                text={presentation.tag[lang]}
                             />
                             <Component.Text
                                 textSize="24px"
                                 color="1"
                                 fontWeight="600"
                             >
-                                {props.item.title[lang]}
+                                {presentation.title[lang]}
                             </Component.Text>
                             <div
                                 style={{
@@ -71,7 +74,7 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                                     color="1"
                                     fontWeight="400"
                                 >
-                                    {props.item.slogan[lang]}
+                                    {presentation.slogan[lang]}
                                 </Component.Text>
                             </div>
 
@@ -81,7 +84,7 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                                     gap: "4px"
                                 }}
                             >
-                                {props.item.simple_featured_features[lang].map((featureText, featureIndex) => (
+                                {presentation.simple_featured_features[lang].map((featureText, featureIndex) => (
                                     <div
                                         key={`${props.item.id}-feature-${featureIndex}`}
                                         className="flex flex-row"
@@ -103,19 +106,45 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                             </div>
                         </div>
                         <div
-                            className="flex"
+                            className="flex flex-col"
                             style={{
-                                flexWrap: "wrap"
+                                gap: "6px"
                             }}
                         >
-                            {props.item.icons_tech_stack.map((x, idx) => (
-                                <Component.Tag
-                                    key={`${idx}=dsadas`}
-                                    color="2"
-                                    type="custom-skills-icon"
-                                    icon={x}
-                                />
-                            ))}
+                            <div className="flex flex-wrap">
+                                {data.tech_stack[lang].slice(0, 8).sort((x,y) => (
+                                    (y.type === "skill-icons" ? 1 : 0)
+                                    - (x.type === "skill-icons" ? 1 : 0)
+                                )).map((techItem, idx) => (
+                                    techItem.type === "skill-icons" ? (
+                                        <Component.Tag
+                                            key={`${props.item.id}-tech-${idx}`}
+                                            type="custom-skills-icon"
+                                            color="2"
+                                            icon={techItem.icon}
+                                        />
+                                    ) : (
+                                        <Component.Tag
+                                            key={`${props.item.id}-tech-${idx}`}
+                                            type="text-with-ball"
+                                            ballColor="1"
+                                            bgColor="2"
+                                            text={techItem.text}
+                                        />
+                                    )
+                                ))}
+                            </div>
+                            <div className="flex flex-wrap">
+                                {data.core_features[lang].slice(0, 4).map((coreItem, idx) => (
+                                    <Component.Tag
+                                        key={`${props.item.id}-core-${idx}`}
+                                        type="text-with-ball"
+                                        ballColor="2"
+                                        bgColor="2"
+                                        text={coreItem}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </div>
                     <div
