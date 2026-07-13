@@ -17,19 +17,45 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
     }) => {
         return (
             <Component.Card
-                color="2"
-                className="w-full flex-1 flex-col"
+                color="1"
+                className="flex flex-row"
             >
                 <Image
                     src={props.item.image_src}
                     width={1920}
                     height={1080}
                     alt="Image"
-                    className="opacity-75 w-[100%] h-[300px]"
+                    style={{
+                        opacity: 1,
+                        width: "450px",
+                        height: "max",
+                        objectFit: "cover"
+                    }}
                 />
-                <div className="flex flex-1 flex-col p-7 gap-7 justify-between h-max">
-                    <div className="flex flex-col gap-6">
-                        <div className="flex flex-col">
+                <div
+                    className="flex flex-col"
+                    style={{
+                        flex: 1,
+                        padding: "28px",
+                        gap: "28px",
+                        justifyContent: "space-between"
+                    }}
+                >
+                    <div
+                        className="flex flex-col"
+                        style={{
+                            gap: "24px"
+                        }}
+                    >
+                        <div
+                            className="flex flex-col gap-2"
+                        >
+                            <Component.Tag
+                                type="text-with-ball"
+                                ballColor="1"
+                                bgColor="2"
+                                text={props.item.tag[lang]}
+                            />
                             <Component.Text
                                 textSize="24px"
                                 color="1"
@@ -37,16 +63,51 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                             >
                                 {props.item.title[lang]}
                             </Component.Text>
-                            <Component.Text
-                                textSize="14px"
-                                color="1"
-                                fontWeight="400"
-                                className="opacity-70"
+                            <div
+                                style={{
+                                    opacity: 0.7
+                                }}
                             >
-                                {props.item.slogan[lang]}
-                            </Component.Text>
+                                <Component.Text
+                                    textSize="14px"
+                                    color="1"
+                                    fontWeight="400"
+                                >
+                                    {props.item.slogan[lang]}
+                                </Component.Text>
+                            </div>
+
+                            <div
+                                className="flex flex-col"
+                                style={{
+                                    gap: "4px"
+                                }}
+                            >
+                                {props.item.simple_featured_features[lang].map((featureText, featureIndex) => (
+                                    <div
+                                        key={`${props.item.id}-feature-${featureIndex}`}
+                                        className="flex flex-row"
+                                        style={{
+                                            opacity: 0.8
+                                        }}
+                                    >
+                                        <Component.Text
+                                            textSize="13px"
+                                            color="1"
+                                            fontWeight="400"
+                                        >
+                                            {`• ${featureText}`}
+                                        </Component.Text>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                        <div className="flex flex-wrap">
+                        <div
+                            className="flex"
+                            style={{
+                                flexWrap: "wrap"
+                            }}
+                        >
                             {props.item.icons_tech_stack.map((x, idx) => (
                                 <Component.Tag
                                     key={`${idx}=dsadas`}
@@ -57,7 +118,12 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                             ))}
                         </div>
                     </div>
-                    <div className="flex flex-row gap-1">
+                    <div
+                        className="flex flex-row"
+                        style={{
+                            gap: "4px"
+                        }}
+                    >
                         <Component.Button
                             color="1"
                             action={{
@@ -68,56 +134,18 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                         />
                     </div>
                 </div>
-                {/* <div className="flex flex-row items-start gap-5">
-                    <div>
-                        <Image
-                            src={props.item.logo_src}
-                            width={40}
-                            height={40}
-                            alt="Image"
-                        />
-                    </div>
-
-                    <div className="flex flex-1 flex-col items-start justify-between gap-4">
-                        <div className="flex flex-col gap-2">
-                            <Component.Text
-                                color="1"
-                                textSize="21px"
-                                fontWeight="700"
-                            >
-                                {props.item.title[lang]}
-                            </Component.Text>
-                            <Component.Text
-                                color="1"
-                                textSize="13px"
-                                fontWeight="400"
-                            >
-                                {props.item.slogan[lang]}
-                            </Component.Text>
-                        </div>
-
-                        <img
-                            src={props.item.image_src}
-                            alt={props.item.title[lang]}
-                        />
-                    </div>
-                </div>
-
-                <Component.Button
-                    action={{
-                        type: "ref",
-                        href: `/${lang}/portfolio/${props.item.id}`
-                    }}
-                    text="Ver proyecto"
-                    color="1"
-                /> */}
             </Component.Card>
         )
     }
 
     return (
         <div className="flex flex-col">
-            <div className="gap-4 grid grid-cols-2">
+            <div
+                className="flex flex-col"
+                style={{
+                    gap: "16px"
+                }}
+            >
                 {secondaryItems.map((item) => (
                     <ItemCard
                         key={`${item.id}-dsaadkask`}

@@ -14,6 +14,26 @@ const Marketing2024: PortfolioItem = {
     logo_src: "/old.cv-hero-pfp.jpg",
     youtube_intro: null,
     icons_tech_stack: [],
+    tag: {
+        es: "Freelancer",
+        en: "Freelancer"
+    },
+    simple_featured_features: {
+        es: [
+            "Estrategia de contenido semanal y branding",
+            "Gestión de redes sociales",
+            "Generación de leads auditando sus KPIs",
+            "Reducción de costos por estrategia de creativos",
+            "Automatización por Botpress, GoHighLevel, y necesidades que dieron origen a mis futuros CRMs SaaS"
+        ],
+        en: [
+            "Weekly content strategy and branding",
+            "Social media management",
+            "Lead generation through KPI auditing",
+            "Cost reduction through creative strategy",
+            "Automation with Botpress and GoHighLevel, plus needs that inspired my future SaaS CRMs"
+        ]
+    },
     tech_stack: {
         es: [
             "GoHighLevel CRM",

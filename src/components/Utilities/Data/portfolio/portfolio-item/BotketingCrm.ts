@@ -13,6 +13,26 @@ const BotketingCrm: PortfolioItem = {
     logo_src: "/old.cv-hero-pfp.jpg",
     image_src: "/portfolio-cosas/botketing/Add%20a%20heading%20(29).png",
     youtube_intro: "https://www.youtube.com/watch?v=dqFhC4X13wA",
+    tag: {
+        es: "Proyecto independiente",
+        en: "Solo project"
+    },
+    simple_featured_features: {
+        es: [
+            "Worklfows de automatización HTML5",
+            "Agenda y calendario de citas",
+            "Sistema de tickets",
+            "Multicanal por WhatsApp, Instagram, FB Graph API",
+            "Módulos verticales: Veterinarios (pacientes) y Dentistas (odontograma)",
+        ],
+        en: [
+            "HTML5 automation workflows",
+            "Appointment scheduling and calendar",
+            "Ticketing system",
+            "Multichannel support via WhatsApp, Instagram, and FB Graph API",
+            "Vertical modules: Veterinary (patients) and Dental (odontogram)",
+        ]
+    },
     icons_tech_stack: [
         "TypeScript",
         "NodeJS",

@@ -1,7 +1,6 @@
 import BotketingCrm from "./portfolio-item/BotketingCrm"
 import EarlyDaysDiscordCommunities from "./portfolio-item/EarlyDiscord"
 import MarketingAgency2024 from "./portfolio-item/Marketing2024"
-import OmniInboxEmail from "./future-item/OmniInboxEmail"
 import { AvailableLanguages } from "../Data"
 import { ItemSkillIcons } from "../../Components/Tag/Tag"
 
@@ -12,11 +11,13 @@ export interface PortfolioItem {
     id: string
     title: Record<AvailableLanguages, string>
     slogan: Record<AvailableLanguages, string>
+    simple_featured_features: Record<AvailableLanguages, string[]>
     image_src: string
     logo_src: string
     youtube_intro: string | null
     tech_stack: Record<AvailableLanguages, string[]>
     icons_tech_stack: (keyof typeof ItemSkillIcons)[]
+    tag: Record<AvailableLanguages, string>
     core_features: Record<AvailableLanguages, string[]>
     categories: PortfolioCategory[]
 }
@@ -59,9 +60,7 @@ const PortfolioItems: PortfolioItem[] = [
     MarketingAgency2024
 ]
 
-const PortfolioFutures: FuturePortfolio[] = [
-    OmniInboxEmail
-]
+const PortfolioFutures: FuturePortfolio[] = []
 
 export const Portfolio = {
     getPortfolio: (): PortfolioItem[] => {

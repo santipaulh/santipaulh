@@ -259,6 +259,7 @@ const Tag = (props:
     }
     | {
         type: "text-with-ball"
+        bgColor?: "1" | "2"
         ballColor: "1" | "2"
         text: string
     }
@@ -269,10 +270,15 @@ const Tag = (props:
             "2": "#ef4444"
         }
 
+        const bgColorMap = {
+            "1": "var(--homepage-color-6)",
+            "2": "var(--homepage-color-2)"
+        }
+
         return (
             <div
                 style={{
-                    backgroundColor: "var(--homepage-color-6)",
+                    backgroundColor: bgColorMap[props.bgColor ?? "1"],
                     borderRadius: "var(--homepage-rounded-2)"
                 }}
                 className="flex max-w-max flex-row items-center gap-3 px-4 py-2"
@@ -313,7 +319,7 @@ const Tag = (props:
                 color="1"
                 fontWeight="500"
             >
-                <Image src={iconData.uri} width={24/1.75} height={24/1.75} alt={props.icon} />
+                <Image src={iconData.uri} width={24 / 1.75} height={24 / 1.75} alt={props.icon} />
             </Text>
 
             <Text

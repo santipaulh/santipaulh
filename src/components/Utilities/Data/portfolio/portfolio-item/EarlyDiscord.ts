@@ -13,6 +13,24 @@ const EarlyDiscord: PortfolioItem = {
     image_src: "/portfolio-cosas/early-discord-days/imgdiscorddays.png",
     logo_src: "/old.cv-hero-pfp.jpg",
     youtube_intro: null,
+    tag: {
+        es: "Experiencia",
+        en: "Experience"
+    },
+    simple_featured_features: {
+        es: [
+            "Cargo de Moderador, Administrador y Community Managment",
+            "Gestor de eventos",
+            "Desarrollo de bots para automatización",
+            "Referentes influencers: Spreen y Aquino"
+        ],
+        en: [
+            "Moderator, Administrator, and Community Management roles",
+            "Event management",
+            "Bot development for automation",
+            "Influencer references: Spreen and Aquino"
+        ]
+    },
     icons_tech_stack: [
         "NodeJS",
         "JavaScript",
