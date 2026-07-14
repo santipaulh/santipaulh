@@ -8,7 +8,7 @@
 | Type | Project name | Purpose |
 |---|---|---|
 | SaaS | 🐶 [Workspace for "Veterinaria Las Lomas"](https://github.com/santipaulh/client-vetlaslomas-workspace/) | IN-Development - A veterinary management solution developed for one of my previous marketing & workflow automation client, focused on their operational and workflow requirements. |
-| SaaS | 📕 [Botketing](https://santipaul.com/en/portfolio/botketing-crm) | IN-Development An all-in-one workspace platform for work and study, designed for students, professionals, and executives. |
+| SaaS | 📕 [Botketing](https://santipaul.com/en/portfolio/botketing-crm) | Workflow Automation CRM for my private local clients, as public projects became more costful and unflexible. |
 | Services | 📈 [Marketing & AI Agency freelancer](https://santipaul.com/en/portfolio/agencia-marketing-2024) |  Leveraged my client's automation  through the 2024 Ecuadorian energy blackouts. |
 | Services | 📘 [Discord freelancer](https://santipaul.com/en/portfolio/early-days-discord-communities) | Worked for many influencers in the hispanic community at a young age; Spreen, Aquino, Suwie. |
 <!-- | SaaS | 📕 [Workblox](https://github.com/santipaulh/workblox) | IN-Development An all-in-one workspace platform for work and study, designed for students, professionals, and executives. | -->
