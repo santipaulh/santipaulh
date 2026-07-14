@@ -138,7 +138,7 @@ const EarlyDiscord: PortfolioItem = {
                                             es: "Canal de YouTube",
                                             en: "YouTube channel"
                                         },
-                                        href: "https://youtube.com/c/xertozer"
+                                        href: "https://youtube.com/c/AQUINOdiscord"
                                     }
                                 ]
                             }
