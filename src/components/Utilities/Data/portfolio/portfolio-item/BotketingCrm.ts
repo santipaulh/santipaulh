@@ -31,7 +31,7 @@ const BotketingCrm: PortfolioItem = {
                 "Vertical modules: Veterinary (patients) and Dental (odontogram)"
             ]
         },
-        image_src: "/portfolio-cosas/botketing/Add%20a%20heading%20(29).png",
+        image_src: "/portfolio-cosas/botketing/Add%20a%20heading%20(27).png",
         logo_src: "/old.cv-hero-pfp.jpg",
         youtube_intro: null,
         tag: {
