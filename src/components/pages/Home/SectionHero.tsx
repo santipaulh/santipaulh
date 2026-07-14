@@ -65,7 +65,7 @@ const SectionHero = ({ lang }: SectionHeroProps) => {
                         <Component.Tag
                             type="text-with-ball"
                             ballColor="1"
-                            text="Disponible para nuevos proyectos"
+                            text={language.hero.tagAvailableFor}
                         />
                         <div className="flex flex-col gap-2">
                             <Component.Text color="1" textSize="35px" fontWeight="700" shadow>
