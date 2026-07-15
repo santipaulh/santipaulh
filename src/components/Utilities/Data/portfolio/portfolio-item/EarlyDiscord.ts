@@ -41,9 +41,10 @@ const EarlyDiscord: PortfolioItem = {
         tech_stack: {
             es: [
                 { type: "skill-icons", icon: "NodeJS" },
-                { type: "text", text: "JavaScript y TypeScript" },
+                { type: "skill-icons", icon: "JavaScript" },
+                { type: "skill-icons", icon: "TypeScript" },
                 { type: "skill-icons", icon: "Redis" },
-                { type: "text", text: "MongoDB con Mongoose" },
+                { type: "skill-icons", icon: "MongoDB" },
                 { type: "skill-icons", icon: "SQLite" },
                 { type: "skill-icons", icon: "Docker" },
                 { type: "skill-icons", icon: "DiscordJS" },
@@ -52,9 +53,10 @@ const EarlyDiscord: PortfolioItem = {
             ],
             en: [
                 { type: "skill-icons", icon: "NodeJS" },
-                { type: "text", text: "JavaScript and TypeScript" },
+                { type: "skill-icons", icon: "JavaScript" },
+                { type: "skill-icons", icon: "TypeScript" },
                 { type: "skill-icons", icon: "Redis" },
-                { type: "text", text: "MongoDB via Mongoose" },
+                { type: "skill-icons", icon: "MongoDB" },
                 { type: "skill-icons", icon: "SQLite" },
                 { type: "skill-icons", icon: "Docker" },
                 { type: "skill-icons", icon: "DiscordJS" },
