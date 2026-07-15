@@ -90,19 +90,11 @@ const EarlyDiscord: PortfolioItem = {
                     es: "Comunidades de Discord",
                     en: "Discord communities"
                 },
-                subtitle: {
-                    es: "Comunidades en las que trabajé como desarrollador y administrador.",
-                    en: "Communities where I worked as a developer and administrator."
-                },
                 items: [
                     {
                         title: {
                             es: "Discord de AQUINO",
                             en: "AQUINO Discord"
-                        },
-                        subtitle: {
-                            es: "Bots y moderación en el servidor AQUINO.",
-                            en: "Bots and moderation in the AQUINO server."
                         },
                         image_src: "/portfolio-cosas/early-discord-days/Screenshot 2026-05-06 194015.png",
                         bullets: {
@@ -149,10 +141,6 @@ const EarlyDiscord: PortfolioItem = {
                             es: "Discord de Spreen",
                             en: "Spreen Discord"
                         },
-                        subtitle: {
-                            es: "Bots y automatización para la comunidad Spreen.",
-                            en: "Bots and automation for the Spreen community."
-                        },
                         image_src: "/portfolio-cosas/early-discord-days/Screenshot 2026-05-06 194116.png",
                         bullets: {
                             es: [
@@ -174,19 +162,11 @@ const EarlyDiscord: PortfolioItem = {
                     es: "Proyectos",
                     en: "Projects"
                 },
-                subtitle: {
-                    es: "Enlaces a contenido y proyectos públicos relacionados con la experiencia.",
-                    en: "Links to public content and related projects from the experience."
-                },
                 items: [
                     {
                         title: {
                             es: "Bots adicionales",
                             en: "Additional bots"
-                        },
-                        subtitle: {
-                            es: "Proyectos de bots extra en comunidades Discord.",
-                            en: "Additional bot projects in Discord communities."
                         },
                         image_src: "/portfolio-cosas/early-discord-days/imgdiscorddays.png",
                         bullets: {

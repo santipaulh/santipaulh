@@ -44,13 +44,11 @@ export interface PortfolioLink {
 
 export interface PortfolioCategory {
     title: Record<AvailableLanguages, string>
-    subtitle: Record<AvailableLanguages, string>
     items: PortfolioSectionItem[]
 }
 
 export interface PortfolioSectionItem {
     title: Record<AvailableLanguages, string>
-    subtitle: Record<AvailableLanguages, string>
     image_src: string
     bullets: Record<AvailableLanguages, string[]>
     links: PortfolioLink[]

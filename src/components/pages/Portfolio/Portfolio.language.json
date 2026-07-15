@@ -4,13 +4,15 @@
         "backHome": "Back to Home",
         "backButton": "Back",
         "techStack": "Tech Stack",
-        "coreFeatures": "Core Features"
+        "coreFeatures": "Core Features",
+        "seeMore": "See More"
     },
     "es": {
         "notFound": "Portfolio no existente",
         "backHome": "Back to Home",
         "backButton": "Back",
         "techStack": "Stack Tecnológico",
-        "coreFeatures": "Core Features"
+        "coreFeatures": "Core Features",
+        "seeMore": "Ver Más"
     }
 }

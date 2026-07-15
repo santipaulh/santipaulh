@@ -72,19 +72,11 @@ const Marketing2024: PortfolioItem = {
                     es: "Resultados",
                     en: "Results"
                 },
-                subtitle: {
-                    es: "Clientes del rubro veterinario, odontologico y pedagogico.",
-                    en: "Clients from veterinary, dental, and educational sectors."
-                },
                 items: [
                     {
                         title: {
                             es: "Veterinaria Las Lomas",
                             en: "Veterinaria Las Lomas"
-                        },
-                        subtitle: {
-                            es: "Automatización de chats de WhatsApp y captación con Meta Ads.",
-                            en: "WhatsApp chat automation and lead acquisition with Meta Ads."
                         },
                         image_src: "/portfolio-cosas/agencia-2024/Add%20a%20heading%20(24).png",
                         bullets: {
@@ -111,10 +103,6 @@ const Marketing2024: PortfolioItem = {
                             es: "Guarderia Danny Kids",
                             en: "Danny Kids Daycare"
                         },
-                        subtitle: {
-                            es: "Campaña de captación acelerada para centro pedagogico infantil.",
-                            en: "Accelerated lead campaign for a child education center."
-                        },
                         image_src: "/portfolio-cosas/agencia-2024/Add%20a%20heading%20(26).png",
                         bullets: {
                             es: [
@@ -135,10 +123,6 @@ const Marketing2024: PortfolioItem = {
                         title: {
                             es: "Dr Julio Moncayo",
                             en: "Dr Julio Moncayo"
-                        },
-                        subtitle: {
-                            es: "Gestión de cuenta odontologica y crecimiento orgánico.",
-                            en: "Dental account management and organic growth."
                         },
                         image_src: "/portfolio-cosas/agencia-2024/Screenshot%202026-07-01%20192855.png",
                         bullets: {

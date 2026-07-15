@@ -108,19 +108,11 @@ const BotketingCrm: PortfolioItem = {
                     es: "Resultados",
                     en: "Results"
                 },
-                subtitle: {
-                    es: "Casos de estudio y capturas de progreso",
-                    en: "Study cases and progress snapshots"
-                },
                 items: [
                     {
                         title: {
                             es: "En desarrollo",
                             en: "In development"
-                        },
-                        subtitle: {
-                            es: "Desarrollo pausado",
-                            en: "Paused development"
                         },
                         image_src: "/portfolio-cosas/botketing/IMG_20250621_184627 (1).jpg",
                         bullets: {
@@ -144,19 +136,11 @@ const BotketingCrm: PortfolioItem = {
                     es: "Características",
                     en: "Features"
                 },
-                subtitle: {
-                    es: "Capacidades clave diseñadas para automatización y eficiencia",
-                    en: "Core capabilities designed for seamless automation and efficiency"
-                },
                 items: [
                     {
                         title: {
                             es: "Funciones horizontales",
                             en: "Horizontal features"
-                        },
-                        subtitle: {
-                            es: "Herramientas centrales de automatización y colaboración",
-                            en: "Core automation and collaboration tools"
                         },
                         image_src: "/portfolio-cosas/botketing/Add%20a%20heading%20(29).png",
                         bullets: {
@@ -241,10 +225,6 @@ const BotketingCrm: PortfolioItem = {
                         title: {
                             es: "Funciones verticales",
                             en: "Vertical features"
-                        },
-                        subtitle: {
-                            es: "Paquetes de módulos específicos por industria",
-                            en: "Industry-specific module packages"
                         },
                         image_src: "/portfolio-cosas/botketing/Add%20a%20heading%20(34).png",
                         bullets: {

@@ -17,6 +17,15 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
     }) => {
         const presentation = props.item.presentation
         const data = props.item.data
+        const techStackSorted = [...data.tech_stack[lang]].sort((x, y) => (
+            (y.type === "skill-icons" ? 1 : 0)
+            - (x.type === "skill-icons" ? 1 : 0)
+        ))
+        const techStackPreview = techStackSorted.slice(0, 3)
+        const techStackRemaining = Math.max(techStackSorted.length - 3, 0)
+
+        const coreFeaturesPreview = data.core_features[lang].slice(0, 3)
+        const coreFeaturesRemaining = Math.max(data.core_features[lang].length - 3, 0)
 
         return (
             <Component.Card
@@ -77,33 +86,6 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                                     {presentation.slogan[lang]}
                                 </Component.Text>
                             </div>
-
-                            <div
-                                className="flex flex-col"
-                                style={{
-                                    gap: "4px"
-                                }}
-                            >
-                                {presentation.simple_featured_features[lang].map((featureText, featureIndex) => (
-                                    <div
-                                        key={`${props.item.id}-feature-${featureIndex}`}
-                                        className="flex flex-row"
-                                        style={{
-                                            opacity: 0.8
-                                        }}
-                                    >
-                                        <Component.Text
-                                            textSize="13px"
-                                            color="1"
-                                            style="checkmark"
-                                            fontWeight="400"
-                                            styleColor="2"
-                                        >
-                                            {featureText}
-                                        </Component.Text>
-                                    </div>
-                                ))}
-                            </div>
                         </div>
                         <div
                             className="flex flex-col"
@@ -112,10 +94,7 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                             }}
                         >
                             <div className="flex flex-wrap">
-                                {data.tech_stack[lang].slice(0, 8).sort((x,y) => (
-                                    (y.type === "skill-icons" ? 1 : 0)
-                                    - (x.type === "skill-icons" ? 1 : 0)
-                                )).map((techItem, idx) => (
+                                {techStackPreview.map((techItem, idx) => (
                                     techItem.type === "skill-icons" ? (
                                         <Component.Tag
                                             key={`${props.item.id}-tech-${idx}`}
@@ -133,9 +112,17 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                                         />
                                     )
                                 ))}
+                                {techStackRemaining > 0 && (
+                                    <Component.Tag
+                                        type="text-with-ball"
+                                        ballColor="none"
+                                        bgColor="2"
+                                        text={`+${techStackRemaining}`}
+                                    />
+                                )}
                             </div>
                             <div className="flex flex-wrap">
-                                {data.core_features[lang].slice(0, 4).map((coreItem, idx) => (
+                                {coreFeaturesPreview.map((coreItem, idx) => (
                                     <Component.Tag
                                         key={`${props.item.id}-core-${idx}`}
                                         type="text-with-ball"
@@ -144,6 +131,14 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                                         text={coreItem}
                                     />
                                 ))}
+                                {coreFeaturesRemaining > 0 && (
+                                    <Component.Tag
+                                        type="text-with-ball"
+                                        ballColor="none"
+                                        bgColor="2"
+                                        text={`+${coreFeaturesRemaining}`}
+                                    />
+                                )}
                             </div>
                         </div>
                     </div>

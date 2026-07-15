@@ -20,7 +20,7 @@ const Tag = (props:
     | {
         type: "text-with-ball"
         bgColor?: "1" | "2"
-        ballColor: "1" | "2"
+        ballColor: "1" | "2" | "none"
         text: string
     }
 ) => {
@@ -43,12 +43,14 @@ const Tag = (props:
                 }}
                 className="flex max-w-max flex-row items-center gap-3 px-4 py-2"
             >
-                <div
-                    style={{
-                        backgroundColor: ballColorMap[props.ballColor]
-                    }}
-                    className="h-2 w-2 rounded-full"
-                />
+                {props.ballColor !== "none" && (
+                    <div
+                        style={{
+                            backgroundColor: ballColorMap[props.ballColor]
+                        }}
+                        className="h-2 w-2 rounded-full"
+                    />
+                )}
                 <Text
                     color="1"
                     textSize="11px"

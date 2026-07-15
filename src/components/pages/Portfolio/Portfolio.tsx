@@ -11,7 +11,6 @@ import FaviconPNG from "../../../../public/favicon.png"
 
 type PortfolioCardContent = {
     title: string
-    subtitle?: string
     image_src: string
     bullets: string[]
     links?: PortfolioLink[]
@@ -43,7 +42,6 @@ const PortfolioCard = ({
     onPrimaryAction,
     showPrimaryAction = false,
     titleSize = "18px",
-    subtitleSize = "14px",
     lang
 }: {
     item: PortfolioCardContent
@@ -51,7 +49,6 @@ const PortfolioCard = ({
     onPrimaryAction?: () => void
     showPrimaryAction?: boolean
     titleSize?: string
-    subtitleSize?: string,
     lang: AvailableLanguages
 }) => (
     <Component.Card
@@ -76,15 +73,19 @@ const PortfolioCard = ({
                     >
                         {item.title}
                     </Component.Text>
-                    {item.subtitle && (
-                        <Component.Text
-                            fontWeight="400"
-                            textSize={subtitleSize}
-                            color="1"
+                </div>
+
+                <div className="flex flex-col items-start gap-2">
+                    {item.bullets.map((bullet, idx) => (
+                        <Component.Tag
+                            key={`${idx}-portfolio-bullet`}
+                            type="text-with-ball"
+                            ballColor="2"
+                            bgColor="2"
+                            text={bullet}
                         >
-                            {item.subtitle}
-                        </Component.Text>
-                    )}
+                        </Component.Tag>
+                    ))}
                 </div>
 
                 {((item.links && item.links.length > 0) || (showPrimaryAction && onPrimaryAction)) ? (
@@ -122,26 +123,15 @@ const PortfolioCard = ({
                                         type: "click",
                                         onClick: onPrimaryAction
                                     }}
-                                    text={lang === "es" ? "Ver mas" : "See more"}
-                                    color="2"
+                                    text={langJson[lang].seeMore}
+                                    color="1"
                                 />
                             </div>
                         ) : null}
                     </div>
                 ) : null}
 
-                <div className="flex flex-col items-start gap-2">
-                    {item.bullets.map((bullet, idx) => (
-                        <Component.Tag
-                            key={`${idx}-portfolio-bullet`}
-                            type="text-with-ball"
-                            ballColor="2"
-                            bgColor="2"
-                            text={bullet}
-                        >
-                        </Component.Tag>
-                    ))}
-                </div>
+
             </div>
         </div>
     </Component.Card>
@@ -171,7 +161,6 @@ export default function PortfolioPage({
                     <PortfolioCard
                         item={{
                             title: item.title[lang],
-                            subtitle: item.subtitle[lang],
                             image_src: item.image_src,
                             bullets: item.bullets[lang],
                             links: item.links
@@ -221,14 +210,6 @@ export default function PortfolioPage({
                             color="1"
                         >
                             {category.title[lang]}
-                        </Component.Text>
-                        <Component.Text
-                            fontWeight="600"
-                            textSize="20px"
-                            color="1"
-                            style="quote"
-                        >
-                            {category.subtitle[lang]}
                         </Component.Text>
                     </div>
                     {renderSectionCards(category.items, idx)}
