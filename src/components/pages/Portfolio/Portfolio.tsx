@@ -123,7 +123,7 @@ const PortfolioCard = ({
                                         type: "click",
                                         onClick: onPrimaryAction
                                     }}
-                                    text={langJson[lang].seeMore}
+                                    text={langJson[lang].seeMore }
                                     color="1"
                                 />
                             </div>
