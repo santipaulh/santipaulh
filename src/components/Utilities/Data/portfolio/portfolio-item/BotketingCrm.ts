@@ -105,34 +105,6 @@ const BotketingCrm: PortfolioItem = {
             ]
         },
         categories: [
-            /*{
-                title: {
-                    es: "Resultados",
-                    en: "Results"
-                },
-                items: [
-                    {
-                        title: {
-                            es: "En desarrollo",
-                            en: "In development"
-                        },
-                        image_src: "/portfolio-cosas/botketing/IMG_20250621_184627 (1).jpg",
-                        bullets: {
-                            es: [
-                                "El producto muestra un fuerte potencial para clientes con procesos repetitivos y altos volúmenes de comunicación.",
-                                "Los primeros prototipos ya generan interés en equipos de marketing locales."
-                            ],
-                            en: [
-                                "The product shows strong potential for clients with repetitive processes and high communication volume.",
-                                "The first prototypes already attract interest from local marketing teams."
-                            ]
-                        },
-                        links: [],
-                        gallery: [
-                        ]
-                    }
-                ]
-            },*/
             {
                 title: {
                     es: "Características",
@@ -241,6 +213,34 @@ const BotketingCrm: PortfolioItem = {
                         },
                         links: [],
                         gallery: []
+                    }
+                ]
+            },
+            {
+                title: {
+                    es: "Resultados",
+                    en: "Results"
+                },
+                items: [
+                    {
+                        title: {
+                            es: "En desarrollo",
+                            en: "In development"
+                        },
+                        image_src: "/portfolio-cosas/botketing/IMG_20250621_184627 (1).jpg",
+                        bullets: {
+                            es: [
+                                "El producto muestra un potencial fuerte para clientes",
+                                "Botketing pasará a remodelación bajo el nombre 'Saya' CRM"
+                            ],
+                            en: [
+                                "The product shows strong potential for clients",
+                                "The new 'Saya' CRM is under development as a revamp for Botketing"
+                            ]
+                        },
+                        links: [],
+                        gallery: [
+                        ]
                     }
                 ]
             }
