@@ -8,7 +8,7 @@
 | Type | Project name | Purpose |
 |---|---|---|
 | SaaS | 🐶 [Saya CRM](https://github.com/santipaulh/saya/) | $${\color{red} { \text{IN-DEVELOPMENT} }}$$ - A revamp of Botketing for local South American businesses; automation and centralization of worksapce. |
-| SaaS | 📕 [Botketing](https://santipaul.com/en/portfolio/botketing-crm) | Workflow Automation CRM for my private local clients, as public projects became more costful and unflexible. |
+| SaaS | 📕 [Botketing](https://santipaul.com/en/portfolio/botketing-crm) | Workflow Automation CRM for my private local clients, as commercial applications became more costful and unflexible. |
 | Services | 📈 [Marketing & AI Agency freelancer](https://santipaul.com/en/portfolio/agencia-marketing-2024) |  Leveraged my client's automation  through the 2024 Ecuadorian energy blackouts. |
 | Services | 📘 [Discord freelancer](https://santipaul.com/en/portfolio/early-days-discord-communities) | Worked for many influencers in the hispanic community at a young age; Spreen, Aquino, Suwie. |
 <!-- | SaaS | 📕 [Workblox](https://github.com/santipaulh/workblox) | IN-Development An all-in-one workspace platform for work and study, designed for students, professionals, and executives. | -->
