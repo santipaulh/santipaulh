@@ -105,7 +105,7 @@ const BotketingCrm: PortfolioItem = {
             ]
         },
         categories: [
-            {
+            /*{
                 title: {
                     es: "Resultados",
                     en: "Results"
@@ -132,7 +132,7 @@ const BotketingCrm: PortfolioItem = {
                         ]
                     }
                 ]
-            },
+            },*/
             {
                 title: {
                     es: "Características",
