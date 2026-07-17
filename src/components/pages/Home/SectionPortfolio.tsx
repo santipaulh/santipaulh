@@ -93,7 +93,7 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                                 gap: "6px"
                             }}
                         >
-                            <div className="flex flex-wrap">
+                            {/* <div className="flex flex-wrap">
                                 {techStackPreview.map((techItem, idx) => (
                                     techItem.type === "skill-icons" ? (
                                         <Component.Tag
@@ -139,7 +139,7 @@ const SectionPortfolio = ({ lang }: { lang: AvailableLanguages }) => {
                                         text={`+${coreFeaturesRemaining}`}
                                     />
                                 )}
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div
