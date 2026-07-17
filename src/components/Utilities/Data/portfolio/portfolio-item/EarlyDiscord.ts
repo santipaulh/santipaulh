@@ -33,8 +33,8 @@ const EarlyDiscord: PortfolioItem = {
         logo_src: "/old.cv-hero-pfp.jpg",
         youtube_intro: null,
         tag: {
-            es: "Experiencia",
-            en: "Experience"
+            es: "Freelancer",
+            en: "Freelancer"
         }
     },
     data: {
